@@ -1,0 +1,126 @@
+
+/* CSS Text Spacing */
+
+/* 
+В CSS есть несколько свойств для кправления интервал между символами.
+
+Есть  такие свойства как:
+
+text-indent
+letter-spacing
+line-height
+word-spacing
+white-space
+*/
+
+/* Отступы в тексте CSS  */
+
+/* 
+Свойство CSS ' text-indent ' используется для указания отступа 
+первой строки в текстовом блоке.
+
+Совет: допускается отрицательное значение. Если значение отрицательное 
+, первая строка юудет смещена влево.
+*/
+
+/* text-indent */
+.text-indent {
+   text-indent: 50px;
+}
+
+/* text-indent -px */
+.text-indent-minus {
+    text-indent: -50px;
+}
+
+
+
+/* Интервал между буквами CSS */
+
+/* Свойство CSS 'letter-spacing' используется для указания интервал 
+между символами в тексте. 
+
+Совет : допускаются отрицательные значения 
+*/
+
+.letter-spacing {
+    /* letter-spacing:10px; */
+}
+
+.letter-spacing-minus {
+    letter-spacing: -3px
+}
+
+
+/* Высота строки CSS */
+/* 
+Свойство CSS 'line-height' используется для указания интервал между
+строками.
+
+Примечание: отрицательное значение не допускается.
+*/
+
+.line-height {
+    line-height:0.5;
+}
+
+
+/* word-spacing */
+/* 
+Свойство CSS "word-spacing" используется для указания интервала между
+словами в тексте.
+
+Совет: Допускаются отрицательные значения.
+*/
+
+.word-spacing {
+    word-spacing:20px
+}
+
+.word-spacing-minus {
+    word-spacing:-4px
+}
+
+
+/* Пробел в CSS */
+/* 
+Свойства CSS 'white-space' определяет, как обрабатываются пробелы
+внутри элемента.
+
+Это свойство можеть иметь одно из следующих значений.
+
+normal -default
+nowrap 
+pre
+pre-line
+pre-wrap
+*/
+
+
+/* nowrap */
+.white-space-nowrap{
+    white-space: nowrap;
+}
+
+/* wrap */
+.white-space-wrap {
+    white-space:wrap
+}
+
+/* pre */
+
+.white-space-pre {
+    white-space: pre;
+}
+
+/* pre-line */
+.white-space-preline {
+    white-space:pre-line
+}
+
+/* pre-wrap */
+
+.white-space-prewrap {
+    white-space:pre-wrap;
+
+}

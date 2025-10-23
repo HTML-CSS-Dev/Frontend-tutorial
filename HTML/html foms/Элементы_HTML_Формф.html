@@ -1,0 +1,189 @@
+<!-- Элементы HTML <form> -->
+
+    <!-- 
+Элементы HTML <form> может содрежать один или несколько следующих элементов
+формы:
+-->
+
+<!--
+<input>
+<label>
+<select>
+<textarea>
+<button>
+<fieldset>
+<legend>
+<datalist>
+<output>
+<option>
+<optgroup>
+-->
+
+<!-- Элемент <input>  -->
+
+<!-- 
+Элемент <input> в HTML - самый используемый элемнет формы.
+  
+Элемент <input> может отображаться по-разному в 
+зависимости от атрибута 'type'
+
+-->
+
+
+<!-- Элемент <label> -->
+
+<!-- 
+Обратите внимание на использование элемента <label> в приведенном выше примере 
+    
+Элемент <label> полезен для пользователей программ чиения с экрана , поскольку 
+программа зачитывает вслух метку , когда пользователь фокусируетя на элементе ввода.    
+
+Элемент <label> также помогает пользователям , которым сложно нажимать на очень
+маленькие области (например, на переключателя или флажки) , поскольку при нажатии 
+на текст внутри элемента <label> происходит переключение переключателя  / флажка  
+
+Атрибут 'for' тега <label> должен совпадать с атрибутом 'id' элемента <input> ,
+чтобы они были связаны между собой.
+-->
+
+<!-- пример -->
+
+<label for="name">first name:</label>
+<br><input type="text" id="name">
+
+
+<hr>
+
+<!-- Элемент <textarea> -->
+
+<!-- 
+Элемент <textarea> определяет многострочное поле ввода (текстовую область) 
+-->
+
+<h3>Textarea</h3>
+<label for="comm">Leave the comment</label> <br>
+<textarea name="comment" id="comm">Please leave the commet</textarea>
+
+<!-- 
+Атрибут 'rows' указывает на видимое количество строк в текстовой области 
+
+Атрибут 'cols' указывает видимую ширину тектовой области 
+
+Вот так будет выглядеть приведенный выше HTML - код в браузере.
+-->
+<hr>
+<h3>Атрибуты rows и cols</h3>
+<label for="comment"><b>Comments</b></label> <br>
+<textarea name="comments" id="comment" rows="5" cols="50">Leave the comment</textarea>
+
+<hr>
+
+<!-- Элемент <select>  -->
+<!-- Элемент <select> определяет раскрывающий список  -->
+
+<h3>Атрибут select</h3>
+<label for="cars">Select a Car</label>
+<select name="cars" id="cars"></select>
+
+<hr>
+<!-- 
+Элемент <option> определяет параметр , который можно выбрать.
+
+По умолчанию выбрать первый элемент в раскрывающем списке.
+
+Чтобы задать предварительно выбрнный вариант , добавьте к нему атрибут 
+'selected'
+-->
+
+<!-- пример -->
+<h3>Атрибут Option </h3>
+<label for="cars"></label>
+<select name="cars" id="cars">
+    <option >BMW</option>
+    <option selected>Mercedes</option>
+    <option >Toyota</option>
+</select>
+
+<hr>
+<!-- Видимые атрибуты --> 
+<!-- Используйте атрибут 'size' для указания количетсва видимых значений -->
+<h3>атрибут size</h3>
+<label for="cars"></label>
+<select name="cars" id="cars" size="3">
+    <option selected >BMW</option>
+    <option >Mercedes</option>
+    <option >Toyota</option>
+</select>
+
+<hr>
+
+<!-- Разрешить Множесиво выбор -->
+<!-- Используйте атрибут 'multiple' чтобы мог выбрать несколько значений  -->
+
+<h3>Атирбут multiple</h3>
+<label for="cars">Choose a car</label> <br>
+<select name="cars" id="cars" multiple size="3">
+    <option >BMW</option>
+    <option >Mercedes</option>
+    <option selected >Toyota</option>
+    <option >Bugatti</option>
+    <option >Ferrari</option>
+    <option >Lacetti</option>
+    <option >M5</option>
+    <option >Nerron</option>
+</select>
+
+<hr>
+<!-- Элемент <button> -->
+<!-- Элемент <button> определяет кнопку, на которую можно нажать  -->
+
+<form  action="index.php" method="get" autocomplete novalidate>
+<label for="fname">first name:</label> <br>
+<input type="text" name="fname" id="fname"> <br>
+<button type="submit">send</button>
+</form>
+
+<!--
+Примечание: всегда указывайте атрибут 'type' для эоемента <button> 
+В разных браузерах для элемента button могут использоватбся разные 
+типы по умолчанию    
+-->
+
+<!-- Элементы <fieldset> и <legend> -->
+
+<!-- 
+Элементы <fieldset> исползуется для шруппировки связанных данных в форме
+    
+Элемент <legend> определяет заголовок для элемента <fieldset>.
+-->
+<form action="index.php" target="_self" autocomplete="off" novalidate > 
+    <fieldset>
+        <legend>Персонали</legend>
+    <label for="fname" >Имя:</label><br>
+    <input type="text" name="fname" id="fname"><br>
+
+    <label for="sname">Фамилия:</label><br>
+    <input type="text" name="sname" id="sname">
+</fieldset>
+</form>
+
+<hr>
+<!-- Элемнет <datalist> -->
+<!-- Элемент <datalist> указывает на список заранее определенных параметров 
+для элемента <input>
+
+При вводе данных пользователи будут видеть раскрывающийся список заранее 
+заданных параметров
+
+Атрибут 'list' элемента <input> должен ссылаться на атрибут 'id' элемента
+<datalist>
+-->
+<h3>Тег <q>datalist</q> + атрибут 'list' </h3>
+<form>
+    <input list="browser"> 
+<datalist id="browser">
+<option value="Yandex">
+<option value="Opera">
+<option value="Edge">
+</datalist>
+</form>

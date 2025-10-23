@@ -1,0 +1,45 @@
+/* Свойство display : inline-block */
+
+/* 
+Свойство 'display:inline-block' сочетает в себе свойтсва как строчгых так и
+блочных  элементов.
+
+Элемент с "display:inline-block" появится в той же строке , что и другие
+встроенные элементы или элементы встроенного блока. Кроме того , вы можете 
+задать  ствойтва width, height , margin-top , margin-bottom. для элемента 
+(например для блочных элементов).
+*/
+
+/* Создание горизонатльного навигационного меню  */
+/* Обычно display: inline-block используется для отображения элементов 
+списка в горизонтальном, а не в вертикальном формате. В следующем примере 
+создается горизонтальное навигационное меню: */
+
+
+ul > li {
+    display: inline-block;
+    color:black;
+    list-style: none;
+}
+
+
+.container {
+    border:1px solid red;
+    height: 200px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.left {
+    display: inline-block;
+    border: 1px solid red;
+    height: 200px;
+    width: 350px;
+}
+
+.right {
+    display: inline-block;
+    border: 1px solid red;
+    height: 200px;
+    width: 340px;
+}

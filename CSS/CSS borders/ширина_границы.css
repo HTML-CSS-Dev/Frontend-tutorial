@@ -1,0 +1,94 @@
+/* CSS Ширины границы */
+/* Ширины границы CSS */
+
+/* Свойство 'border-width' определяет ширину четырех границ */
+/* 
+Ширину можно задать в виде конкретного размера (в пикселях, пунктах,
+сантиметрах , эмах и т.д.) или с помощью одного из трех 
+предустановленных значений: тонкое , среднее или толстое.)
+*/
+
+
+
+/*  
+
+dotted - определяет пунктирную границу
+dashed - создает пунктирную границу
+solid  - определяет четкую границу 
+double - определяет двоную границу
+groove - определяет трехмерную рифленую рамку. Эффект зависит от 
+значения цвета рамки 
+
+ridge  - определяет трехмерную ребристую границу.Эффект зависит от
+значения цвета границы.
+
+inset  - определяет трехмерную рамку. Эффект зависит от значения 
+border-color
+
+outset - определяет трехмерную начальную границу. Эффект зависит от 
+значения цвета границы.
+none   -  не определяет границы
+hidden - определяет скрытую границу.
+
+*/
+
+.dotted {
+    border-style:dotted;
+    border-width:3px;
+}
+
+.dashed {
+    border-style: dashed;
+    border-width:3px;
+}
+
+.solid{
+    border-style:solid;
+    border-width:3px
+}
+.double{
+    border-style:double;
+    border-width:3px;
+}
+.groove {
+    border-style:groove;
+    border-width:3px
+}
+.ridge{
+    border-style:ridge;
+    border-width:3px
+}
+
+.inset{
+    border-style:inset;
+    border-width:3px
+}
+.outset{
+    border-style:outset;
+    border-width:3px;
+}
+
+.none{
+    border-style:none;
+    border-width:3px;
+}
+.hidden{
+    border-style:hidden;
+    border-width:3px;
+}
+
+
+/* Определенная Ширина сторон  */
+/* 
+Свойство 'border-width' может иметь от одного до четырех значений
+(для верхней границы, правой границы , нижней нраницы и левой 
+границы.)
+*/
+
+h2 {
+    border-style:dotted;
+    border-width:2px  5px 2px 5px
+} 
+
+
+

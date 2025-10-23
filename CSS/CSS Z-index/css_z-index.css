@@ -1,0 +1,67 @@
+/* CSS Свойство z-index  */
+
+/* Свойство css z-index */
+
+/* Свойство z-index определяет порядок наложения позиционируемых элементов
+
+Порядок вложенности определяет , какой элемент должен распологатся 
+перед другими элементами или после них.
+
+Когда элементы распологаются , они могут перекрывать другие элементы.
+
+Элемент может иметь полодительный или отрицательный порядок наложения 
+(z-index). */
+
+
+/* Примечание:  z-index работает только с позиционируемыми элементами 
+(position: absolute , relative, fixed  или position:sticky) и гибкими 
+элементами (элементами , которые являются прямыми потомками элементов 
+display:flex ).  
+*/
+
+/* 
+Позиционируемый элемент с более высоким порядком наложения всегда 
+находится над элементом с более низким порядком наложения.
+*/
+
+/* 
+Без z-индекса
+Если несколько позиционируемых элементов накладываются друг на друга 
+без указания z-index, они отображаются в том порядке, в котором 
+определены в исходном HTML-коде.
+*/
+
+div.z-index {
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    position:relative;
+}
+
+[class="first"]     {
+    height: 30px;
+    width:30px;
+    background-color: blue;
+    font-size: 10px;
+    position: absolute;
+    z-index:2;
+}
+[class="second"] {
+    height: 30px;
+    width:30px;
+    background-color: black;
+    color:white;
+    font-size:7px;
+    position: absolute;
+    z-index:1;
+    left:40px;
+}
+[class="third"] {
+    height: 30px;
+    width:30px;
+    background-color: green;
+    font-size:10px;
+    position: absolute;
+    z-index:2;
+    left:20px;
+}

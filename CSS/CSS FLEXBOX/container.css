@@ -1,0 +1,642 @@
+/* Контейнер CSS Flex */
+
+/* Свойства контейнера CSS Flex */
+
+/* 
+Элемент flex-контейнера может иметь следующих свойства:
+
+display - должно быть установлено на 'flex' или 'inline-flex'
+
+flex-direction - устанавливает напрваление отображения гибких элементов 
+
+flex-wrap - указывает должны ли гибкие элементы переноситься по ширине.
+
+flex-flow - сокращенное свойство для "flex-direction" И "flex-wrap"
+
+justify-content - выравнивает гибкие элементы , если они не занимают 
+все доступное пространство по гланой оси (горизонтально)
+
+align-items - выравниает гибкие элементы , если они не занимают все доступное 
+пространство по перечной оси (вертикально)
+
+align-content - выпавнивание гибкие линии , когда на поперечной оси есть 
+дополнительноое пространство , а гибкие элементы переносятся.
+*/
+
+
+
+/* Свойство flex-direction в CSS */
+/* 
+Свойство " flex-direction " определяет направление отображение гибких 
+элементов вс флекс-контейнере.
+
+Это свойство может иметь одно из следующих значений:
+- row
+- column
+- row-reverse
+- column-reverse
+*/
+
+
+/* 
+Значение 'row' является значение по умолчанию и отображается гибике элементы
+по горизонтали (слева направо)
+*/
+
+.row {
+    display:inline-flex;
+    height:100px;
+    width:200px;
+    border:1px solid black;
+    flex-direction: row;
+}
+
+.row > .left {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.row > .right {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+/*Значение "column" отображает гибкие элементы по вертикали (сверху вниз) */
+
+
+.column {
+    display:inline-flex;   
+    height:100px;
+    width:100px;
+    border:1px solid black;
+    flex-direction: column;
+}
+
+.column > .left {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.column > .right {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+/* 
+Значение "row-reverse" отображает гибкие элементы по горизонталии 
+(но справа налево):
+*/
+
+.row-reverse {
+    display:flex;   
+    height:100px;
+    width:100px;
+    border:1px solid black;
+    flex-direction: row-reverse;
+}
+
+.row-reverse > .left {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.row-reverse > .right {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+/*
+Значение "column-reverse" отображает гибкие элементы по вертикали (но снизу
+вверх) 
+*/
+
+.column-reverse {
+    display:flex;   
+    height:100px;
+    width:100px;
+    border:1px solid black;
+    flex-direction: column-reverse;
+}
+
+.column-reverse > .left {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.column-reverse > .right {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+
+/* Свойство CSS flex-wrap */
+/* 
+Свойство "flex-wrap" указывает , должны ли элементы flex переноситься , если 
+для них недостаточно места на одной линии flex.
+
+Это свойство может иметь одно из следующих значений:
+
+- nowrap (по умолчанию)
+- wrap
+- wrap-reverse
+*/
+
+/* nowrap */
+.nowrap {
+    display: flex;
+    flex-direction: row;    
+    flex-wrap:nowrap;
+    height:200px;
+    width:200px;
+    border: 1px solid red;
+}
+
+.nowrap > .left {
+    width: 100px;
+    height: 200px;
+    border: 1px solid red;
+}
+
+.nowrap > .right {
+    height: 200px;
+    width:100px;
+    border:1px solid red
+}
+
+
+/* wrap */
+
+.wrap {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    height: 200px;
+    width:300px;
+    border: 1px solid red;
+}
+
+.wrap > .first {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+} 
+
+.wrap > .second {
+    height:100px;
+    width:100px;
+    border:1px solid red
+}
+
+.wrap > .third {
+    height: 100px;
+    border:1px solid red;
+    width: 100px;
+}
+
+
+
+/* Значение "wrap-reverse" указывает на то что при необхожимости элементы 
+flex будут переноситься в обратном порядке.
+*/
+
+.wrap-reverse {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    border: 1px solid red;
+    height: 50px;
+    width: 100px;
+}
+
+.wrap-reverse > .first {
+    border: 1px solid red;
+    width: 20px;
+    height: 20px;
+}
+
+.wrap-reverse > .second {
+    border: 1px solid red;
+    width: 20px;
+    height: 20px;
+}
+
+.wrap-reverse > .third {
+    border: 1px solid red;
+    width: 20px;
+    height: 20px;
+}
+
+.wrap-reverse > .fifth {
+    border: 1px solid red;
+    width: 20px;
+    height: 20px;
+}
+
+.wrap-reverse > .fourth {
+    border: 1px solid red;
+    width: 20px;
+    height: 20px;
+}
+
+.wrap-reverse > .six {
+    border: 1px solid red;
+    width: 20px;
+    height: 20px;
+}
+
+.wrap-reverse > .seven {
+    border: 1px solid red;
+    width: 20px;
+    height: 20px;
+}
+
+.wrap-reverse > .eight {
+    border: 1px solid red;
+    width: 20px;
+    height: 20px;
+}
+
+.wrap-reverse > .nine {
+    border: 1px solid red;
+    width: 20px;
+    height: 20px;
+}
+
+
+/* CSS flex-свойство flow */
+/* 
+Свойство 'flex-flow' _ это сокращенное обозначение для установки свойств
+"flex-direction"  и " flex-wrap ".
+*/
+
+.flex-flow {
+    display: flex;
+    flex-flow: row nowrap;
+    height:100px;
+    width:200px;
+    border: 1px solid black;
+}
+
+.flex-flow > .first {
+    border: 1px solid black;
+    height:100px;
+    width:100px;
+}
+
+
+.flex-flow > .second {
+    border: 1px solid black;
+    height:100px;
+    width:100px;
+
+}
+
+.flex-flow > .third {
+    border: 1px solid black;
+    height:100px;
+    width:100px;
+}
+
+/* CSS justify-content свойвство */
+
+/* 
+Свойство "justify-content" используется для выравнивания гибких элеемтов
+, когда они не занимают все досиупное пространство по главной оси (по 
+горизонтали).
+
+Это свойство может иметь одно из следующих значений:
+
+-   center
+-   flex-start
+-   flex-end
+-   space-aroud
+-   space-between
+-   space-evently
+*/
+
+
+/* Значение "center" выравнивает гибкие элементы по центру контейнера */
+
+.justify-content-center {
+    display: flex;
+    flex-flow: nowrap row;
+    max-width:300px;
+    height: 200px;
+    justify-content:center ;
+    border: 1px solid black;
+}
+
+.justify-content-center > .left {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+
+}
+
+.justify-content-center > .right {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+}
+
+
+/* Значение flex-start выравнивает гибкие элементы по началу контейнера 
+(это значение по умолчанию): */
+
+.justify-content-flex-start {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    max-width: 300px;
+    height: 200px;
+    border:1px solid black
+}
+
+.justify-content-flex-start > .left {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+}
+
+.justify-content-flex-start > .right {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+}
+
+/* Значение flex-end выравнивание гибкие элементы по краю контейнера */
+
+.justify-content-flex-end {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: flex-end;
+    height: 200px;
+    max-width:300px;
+    border: 1px solid black;
+}
+
+.justify-content-flex-end > .left {
+    border: 1px solid black;
+    height:100px;
+    width:100px;
+}
+
+.justify-content-flex-end > .right {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+/* значение "space-around" отображает гибкте элементы с отступами
+вокруг них  */
+
+.justify-content-space-around  {
+    height:200px;
+    max-width:300px;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    border: 1px solid black;
+}
+
+.justify-content-space-around > .left {
+    border: 1px solid black;
+    height:100px;
+    width:100px;
+}
+
+.justify-content-space-around > .right {
+    border: 1px solid black;
+    height:100px;
+    width:100px;
+}
+
+
+/* значение space-between отображает гиббкие элементы с пробелами между ними:*/
+
+.justify-content-space-between {
+    height:200px;
+    width:300px;
+    border: 1px solid red;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+}
+
+.justify-content-space-between  > .left {
+    height: 100px;
+    width: 100px;
+    border: 1px solid red;
+}
+
+.justify-content-space-between > .right {
+    height: 100px;
+    width: 100px;
+    border: 1px solid red;
+}
+
+/* Значение space-evently отображает элементы flex с одинаковым 
+пространством вокруг них:
+*/
+
+.justify-content-space-evently {
+    height: 200px;
+    max-width: 300px;
+    border: 1px solid red;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.justify-content-space-evently > .left {
+    height:100px;
+    width:100px;
+    border: 1px solid red
+}
+
+.justify-content-space-evently > .right {
+    height:100px;
+    width:100px;
+    border: 1px solid red
+}
+
+
+/* CSS align-свойство элементов */
+/* 
+Свойство 'align-items' используется для выравнияания гибких элеемнтов,
+когда они не занимают все доступное пространство по поперечной оси(верткиали)
+
+Это свойство можеть имеьт одно из следующих значечний:
+
+- normal (по умолчанию)
+- center
+- flex-start
+- flex-end
+- stretch
+- baseline
+*/
+
+/* значение center выравнивает гибкие элементы по центру контейнера */
+
+.align-items-center {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height:200px;
+    width:300px;
+    border: 1px solid red;
+}
+
+.align-items-center > .left {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+
+}
+
+.align-items-center > .right {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+}
+
+
+/* Значение "flex-start" выпавнивает гибкие элеемнты по верхней части
+контейнера */
+
+.align-items-flex-start {
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: flex-start;
+    border: 1px solid black;
+    height: 200px;
+    width: 300px;
+}
+
+.align-items-flex-start > .left {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+}
+
+.align-items-flex-start > .right {
+    height:100px;
+    width:100px;
+    border:1px solid black
+}
+
+/*значение flex-end выравниваеие гибкие элементы по нижнему краю контейнера*/
+
+.align-items-flex-end {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    height: 200px;
+    width: 300px;
+    border: 1px solid black;
+}
+
+.align-items-flex-end > .left {
+    height: 100px;
+    width:100px;
+    border:1px solid black
+}
+
+.align-items-flex-end > .right {
+    height:100px;
+    width:100px;
+    border:1px solid black
+}
+
+/* Значение "stretch" растягивает гибкие элементы Ю чтобы они заполнили 
+контейнер (это то же что и 'normal') которое используется по умолчанию )
+*/
+
+.align-items-stretch {
+    display: flex;
+    flex-flow: row nowrap;
+    height:200px;
+    width:300px;
+    border: 1px solid black;
+    align-items:stretch  /* normal */
+}
+
+.align-items-stretch > .left {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+}
+
+.align-items-stretch > .right {
+    height:100px;
+    width: 100px;
+    border: 1px solid black
+}
+
+/* значние baseline выавнивает гибкие элементы по центру контейнера */
+
+.align-items-baseline {
+    display: flex;
+    flex-flow: row nowrap;
+    height:200px;
+    width:300px;
+    border: 1px solid black;
+    align-items:baseline;
+}
+
+.align-items-baseline > .left {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+}
+
+.align-items-baseline > .right {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+}
+
+
+/* CSS align-свойство содержимого */
+
+/* 
+Свойство "align-content" похоже на "align-items", но вместо выравнивание 
+flex-элементов оно выравнивает flex-линии.
+
+
+Она в основном применчется в контейнере с display: flex и flex-wrap: wrap (то есть когда элементы переносятся на новые строки).
+
+Это свойтсво может иметь одно из следующих значений
+
+- center
+- stretch
+- flex-start
+- flex-end
+- space-around
+- space-between
+- space-evently
+
+*/
+
+.align-content {
+    height:400px;
+    width:200px;
+    display: flex;
+    flex-flow: wrap row;
+    border: 1px solid black;
+    align-content:space-evently;
+}
+
+.align-content > div {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+}

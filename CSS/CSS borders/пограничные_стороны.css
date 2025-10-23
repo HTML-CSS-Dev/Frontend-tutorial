@@ -1,0 +1,58 @@
+/* CSS Границы сторон  */
+
+/* 
+CSS Border - отдельные стороны 
+*/
+
+/*  
+В CSS также есть свойства для указания границ (верхней , правой ,
+нижней и левой):
+
+- border-top-style
+- border-right-style
+- border-bottom-style
+- border-left-style
+
+*/
+
+.top {
+    border-top-style:dotted;
+    border-width:2px;
+    border-color:#ff0000
+}
+
+.bottom {
+     border-bottom-style:dashed;
+     border-width:3px;
+     border-color:red
+}
+
+.left {
+    border-left-style:solid;
+    border-width:3px;
+    border-color:rgb(0,255,0)
+}
+.right{
+    border-right-style:inset;
+    border-width:3px;
+    border-color:tomato
+}
+
+.all-in-one {   
+    border-top-style:dashed;
+    border-bottom-style:dotted;
+    border-right-style:solid;
+    border-left-style:double;
+    border-width:2px 5px 3px 7px;
+    border-color:slateblue rgb(255,0,0) hsl(120, 100%, 50%) #000000
+}
+
+/* Для достижения того же результата мы можем использовать 
+сокращенное свойство "border-style"
+
+Приведенном ниже пример дает тот же результат сто и предыдущий.
+*/
+
+.all-borders-in-one {
+    border-style:dashed solid dotted double
+}

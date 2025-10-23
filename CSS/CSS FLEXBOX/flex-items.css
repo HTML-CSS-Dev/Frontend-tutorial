@@ -1,0 +1,177 @@
+/* CSS Flex */
+
+/* Элементы CSS Flex*/
+
+/* 
+Прямые дочерние элементы гибкого контейнера фвтоматически становятся  элементами.
+
+Гибкие элементы могут обладать следующими свойстввами
+
+- order - определяет порядок отображения гибких элементов внутри гибкого контейнера
+- flex-grow - указывает насколько гибкий элемент больше остальных гибких элементов
+- flex-shrink - указывает насколько гибкий элемент будет больше уменшаться по 
+стравнению остальными гибкими элемиентами.
+- flex-basis - указывает начальную длину гибкого элемнета 
+- flex - сокращенное свойства для 'flex-grow' , 'flex-shrink', и 'flex-basis'
+- align-self - указывает на выравнивание гибкого ждемента внутри гибкого 
+контейнера.
+
+*/
+
+/* Свойство порядка CSS */
+/* 
+Свойство 'order' определяет порядок отображения гибких элементов внутри гибкого 
+контейнера.
+
+Первый гибкий элемент а исхожном коде не обязательно должени быть первым элементом
+в макете.
+
+Значение порядка должно быть числом , а затем по умолчаниию - 0
+*/
+
+.order {
+    display: flex;
+    flex-flow: wrap row;
+    height: 200px;
+    width: 400px;
+    border: 1px solid black;
+}
+
+.order > .one {
+    order:3;
+    height:100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.order > .two {
+    order:2;
+    height:100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.order > .three {
+    order:1;
+    height:100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+/* CSS flex-свойство роста */
+/* Свойство 'flex-grow' определяет насколько flex-элемент будет 
+увеличиваться относительно остальных flex-элементов 
+
+Значение должно быть числовым , по умолчанию оно равно 0
+*/
+
+.flex-grow {
+    display: flex;
+    flex-flow: nowrap row;
+    width: 400px;
+    border: 1px solid black;
+}
+
+.flex-grow > .one {
+    width: 100px;
+    flex-grow:2;
+    border: 1px solid black;
+}
+
+.flex-grow > .two {
+    height:100px;
+    width: 100px;
+    flex-grow:1;
+    border: 1px solid black;
+}
+
+.flex-grow > .three {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+
+/* CSS flex-свойство сжатия */
+/* 
+Свойство 'flex-shrink' определяет , насколько flex-элемент будет ументшатся 
+по сравнению остальных flex-элементами. 
+
+Значение должно быть числовым , по умолчнаию оно равно 1
+*/
+
+.flex-shrink {
+    display: flex;
+    flex-direction: row;
+    border:1px solid red;
+    width:300px;
+}
+
+.flex-shrink > div {
+    height:100px;
+    width: 100px;
+    border: 1px solid red;
+}
+
+
+/* CSS flex-basis свойство */
+
+/* 
+Свойство flex-basis опеределяет начальную длину гибкого элемента.
+*/
+
+.flex-basis {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    border: 1px solid red;
+
+}
+
+.flex-basis  > div{
+    height:100px;
+    width:100px;
+    border: 1px solid red;
+}
+
+
+/* Свойство CSS flex */
+/* 
+Свойство 'flex' является сокращенным вариантом свотсв "flex-grow", 
+'flex-shrink' , и 'flex-basis'
+*/
+
+.flex {
+    display: flex;
+    flex-flow: nowrap row;
+    border: 1px solid black;
+}
+
+.flex > div {
+    border: 1px solid black;
+    height:100px;
+    width:100px;
+}
+
+/* CSS align-собственное свотсво  */
+/* 
+Свойство ' align-self ' определяет выравнивание выбранного элемента гибкого 
+контента.
+
+Это свойство переопределяет выравнивание по умолчанию , заданное свойством
+'align-items' контейнера.
+*/
+
+.align-self {
+    display: flex;
+    flex-flow: nowrap row;
+    border: 1px solid black;
+    height: 200px;
+}
+
+.align-self > div {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+}

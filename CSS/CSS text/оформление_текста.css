@@ -1,0 +1,170 @@
+/* CSS Оформение текста */
+
+/* 
+Свойство CSS 'text-decoration' используется для управления внешнему 
+видом декоративных линий в тексте.
+*/
+
+/* Это сокрашенное обозначение следующих отдельных свойств */
+
+/* 
+text-decoration-line
+text-decoration-color
+text-decoration-style
+text-decoration-thickness
+*/
+
+
+
+/* text-decoation-line */
+
+/* 
+свойство css 'text-decoration-line' определяет линии оформления 
+добавляемой к тексту.
+
+это свойство может иметь одно или несколько из следующих значений
+
+none - значение по умолчанию. Нет отображения
+underline - декоративная линия отображается под текстом
+overline - декоративная линия отображается поверх теста 
+line-through - декоративная линия проходит через текст.
+*/
+
+
+/* none */
+.text-decoration-line-none {
+    text-decoration-line:none
+}
+
+/* overline */
+.text-decoration-line-overline {
+    text-decoration-line:overline
+}
+
+/* underline */
+.text-decoration-line-underline{
+    text-decoration-line:underline
+}
+
+/* line-through */
+
+.text-decoration-line-linethrough {
+    text-decoration-line:line-through;
+}
+
+/* 
+прмечание: не рекоментдуется подчеркивать текст , который не является
+ссылкой, так ка это часто сбивает читателя с толку.
+*/
+
+/* text-decoration-color */
+/* 
+Свойство CSS 'text-decoration-color' используется для установки 
+цвета декоративной линии. 
+*/
+
+.rgb {
+text-decoration-line:overline;
+text-decoration-color:red
+}
+
+.hex {
+text-decoration-line:underline;
+text-decoration-color:#00ff00
+}
+
+.hsl {
+text-decoration-line:line-through;
+text-decoration-color:hsl(240, 100% , 50%)
+}
+
+
+/* text-decoration-style */
+
+/* 
+свойство css 'text-decoration-style' используется для настройки 
+стиля декоратавной линии.
+
+Это свойство может иметь одно из следующих значений .
+
+solid -  отображает строку как одну строку
+double - отображает линию в виде двойной линии
+dotted - отображает линию в виде пунктира
+dashed - отображает линию в виде пунктира 
+wavy - отображает линию в виде волнистой линиии
+
+*/
+
+
+/* solid */
+.text-decoration-style-solid {
+    text-decoration-line:line-through;
+    text-decoration-color:red;
+    text-decoration-style:solid;
+}
+
+.text-decoration-style-double {
+    text-decoration-line:underline;
+    text-decoration-color:#ff00ff ;
+    text-decoration-style: double;
+}
+.text-decoration-style-dashed {
+    text-decoration-style:dashed;
+    text-decoration-line:overline;
+    text-decoration-color:lightblue
+}
+
+.text-decoration-style-dotted {
+    text-decoration-style:dashed;
+    text-decoration-line:overline;
+    text-decoration-color:hsl(24, 100% , 50%)
+}
+.text-decoration-style-wavy {
+    text-decoration-style:wavy;
+    text-decoration-line:line-through;
+    text-decoration-color:rgb(0,255,0)
+}
+
+
+
+/* text-decoration-thickness */
+/* 
+свойство CSS 'text-decoration-thickness' используется для утсановки 
+декоративной линии.
+*/
+
+.text-decoration-thickness {
+    text-decoration-line:line-through;
+    text-decoration-color:red;
+    text-decoration-style:wavy;
+    text-decoration-thickness: 1px;
+}
+
+/* 
+Сокращенное свойство
+Свойство CSS text-decoration — это сокращённая запись для:
+
+text-decoration-line (обязательно)
+text-decoration-color (необязательно)
+text-decoration-style (необязательно)
+text-decoration-thickness (необязательно)
+*/
+
+.text-decoration {
+    text-decoration: dashed red underline 3px;
+}
+
+
+/* 
+Небольшой совет по ссылкам
+*/
+
+/* 
+По умолчанию все ссылки в HTML подчеркнуты. Ингда можно увидеть ссылки
+без подчеркивания. Символ 'text-decoration:none' используется для 
+удаления подчеркивания со ссылок
+*/
+
+a {
+    text-decoration: none;
+}

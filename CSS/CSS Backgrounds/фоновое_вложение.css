@@ -1,0 +1,14 @@
+/* CSS Фоновое вложение */
+/* 
+Свойство "background-attachment" определяет должно ли фоновое 
+изображение прокручиваться или оставаться неподвижным (не будет 
+прокручиваться вместе с остальной частью страницы.)
+*/
+body {
+    background-image: url('images/green-background.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
+    height: 900px;
+    font-size: 30px;
+    background-attachment:fixed;
+}

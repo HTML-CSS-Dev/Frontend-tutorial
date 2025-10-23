@@ -1,0 +1,698 @@
+<!-- HTML Типы ввода -->
+<!-- В этой главе описаны различные типы элемента <input> в HTML -->
+
+<!-- Типы входных данных HTML -->
+
+<!--  
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+-->
+
+<!-- Совет: Значение атрибута 'type' по умолчанию - 'text'-->
+
+<!-- Тип ввода Текст -->
+<!-- <input type="text"> определяет однострочное текстовое поле ввода: -->
+
+<!-- пример -->
+<h3>Text</h3>
+<label for="fnmae">first name</label> <br>
+<input type="text" id="fnmae">
+<hr>
+
+<!-- Тип ввода Пароля  -->
+<h3>password</h3>
+
+<label for="fnmae">first name</label><br>
+<input type="text" name="fnmae" id="fnmae"><br>
+
+<label for="password">password</label><br>
+<input type="password" id="password" name="password">
+
+<hr>
+<!-- Тип ввода Отправить -->
+
+<h3>submit</h3>
+<label for="fname">full name</label><br>
+<input type="text" id="" name="fname"><br>
+
+<label for="password">password</label> <br>
+<input type="password" name="password" id="password"> <br><br>
+<input type="submit" value="send">
+<p>или</p>
+<input type="submit">
+
+<hr>
+<!-- 
+Если не указать атрибут 'value' для кнопки , она получит текст по умолчанию 
+-->
+
+<!-- Сброс типа входных сигнала -->
+<!-- 
+<input type="reset"> определяет кнопку сброса, которая возвращает все значения 
+формы к значениями по умоляанию: 
+-->
+
+<!-- пример -->
+ <form action="">
+<h3>reset</h3>
+<label for="fname">full name:</label> <br>
+<input type="text" name="fname" id="fname"> <br>
+
+<label for="pass">password</label> <br>
+<input type="password" name="pass" id="pass"> <br><br>
+<input type="submit" value="send"> 
+<input type="reset" value="reset">
+ </form>
+
+ <hr>
+<!-- Если вы измените значения в полях ввода а зетем нажмете кнопку <<Сброс>>,
+ данные формы будут сброшены до значений по умолчанию  
+-->
+
+
+<!-- Тип входного сигнала Радио  -->
+<!-- <input type="radio"> определяет переключатель -->
+<!-- 
+Радиокнопки позволяет пользователью выбрать Только ОДИН из ограниченного числа  
+вариантов -->
+
+<!-- пример -->
+<form action="index.php" method="post" novalidate autocomplete="off">
+    <h3>radio button</h3>
+<label for="fname">full name</label><br>
+<input type="text" id="fname" name="fname"><br>
+
+<label for="pass">password</label><br>
+<input type="password" id="pass" name="password"><br><br>
+
+<input type="radio" id="rb1" name="rb1">
+<label for="rb1">HTML</label> <br>
+
+<input type="radio" name="rb1" id="rb2">
+<label for="rb2">CSS</label><br>
+
+<input type="radio" id="rb3" name="rb1">
+<label for="rb3">JavaScript</label> <br><br>
+<input type="submit" value="send">
+<input type="reset" value="reset">
+</form>
+
+<hr>
+<!-- Флажок "Тип ввода" -->
+<!-- <input type="checkbox"> определяет Флажок -->
+<!-- 
+С помощью флажков пользователь может выбрать НУЛЕВОЕ или НЕСКОЛЬКО вариантов 
+из ограниченного числа доступных 
+-->
+
+<form action="index.php" method="get" novalidate autocomplete="off">
+    <fieldset>
+        <legend><b>checkbox</b></legend>
+        <label for="fname">full name</label> <br>
+        <input type="text" name="fname" id="fname"> <br>
+
+        <label for="pass"></label><br>
+        <input type="password" name="pass" id="pass"><br>
+
+        <p>Hyper Text Markup Language</p>
+        <input type="radio" name="group" id="opt1"> <label for="opt1">CSS</label>
+        <input type="radio" name="group" id="opt2"> <label for="opt2">HTML</label>
+        <input type="radio" name="group" id="opt3"> <label for="opt3">JavaScript</label>
+        <br>
+        <p>Cascade Style Sheet</p>
+        <input type="radio" name="checkbox" id="chs1"> <label for="chs1">HTML</label>
+        <input type="checkbox" name="checkbox" id="chs2"> <label for="chs2">CSS</label>
+        <input type="checkbox" name="checkbox" id="chs3"> <label for="chs3">JavaScript</label>
+        <br><br>
+        <input type="submit" value="send">
+        <input type="reset" value="reset">
+    </fieldset>
+</form>
+
+<hr>
+
+
+<!--Кнопка вводы типа-->
+<!-- <input type="button"> определяет кнопку -->
+
+<form action="index.php" method="post" novalidate autocomplete="off">
+    <fieldset>
+        <legend><b>button</b></legend>
+    <label for="fname">full name</label> <br>
+    <input type="text" id="fname" name="fname"><br>
+
+    <label for="pass">password</label><br>
+    <input type="password" id="pass" name="password"><br>
+    
+    <p>JavaScript</p>
+    <input type="radio" id="js" name="opt1">
+    <label for="js">JS</label>
+
+    <input type="radio" id="html" name="opt1">
+    <label for="html">HTML</label>
+    
+    <input type="radio" id="css" name="opt1">
+    <label for="css">CSS</label>
+
+    
+    <p>HTML</p>
+    <input type="checkbox" id="opt2">
+    <label for="opt2">Hyper Text Markup Language</label>
+
+    <input type="checkbox" id="opt3">
+    <label for="opt3">Cascade Stylesheet</label>
+
+    <input type="checkbox" id="opt4">
+    <label for="opt4">JavaScript</label>
+    <br><br>
+    <input type="submit">
+    <input type="reset">
+    <input type="button" value="button">
+    </fieldset>
+</form>
+
+
+<hr>
+<!-- Тип входного сигнала Color -->
+<!-- 
+<input type="color"> используется для полей ввода ,в которых должени быть указан
+цвет.
+
+В зависимостиот поддержки браузеров в поле ввода может отобрадатся палитра цветов.
+-->
+
+<!-- пример -->
+<h3>color</h3>
+<label for="favcolor">choose your favourite color</label><br>
+<input type="color" name="favcolor" id="favcolor">
+
+<hr>
+
+<!-- Тип ввода Дата  -->
+<!-- 
+-->
+<h3>date</h3>
+<label for="date">Date of Birth</label>
+<input type="date" name="date" id="date" min="2023-11-29" max="2025-10-21">
+<br><br>
+<input type="submit" value="choose">
+<!-- 
+Вы также можете использовать атрибуты 'min' 'max' для добавления ограничений
+по датам
+-->
+
+<hr>
+
+
+<!-- Тип ввода: местное время -->
+<!-- <input type="datetime-local"> обозначает поле для ввода даты и времени без  
+указания часового пояса
+
+В зависимости от поддержки браузеров в поле ввода отобрадается средство выбора даты
+-->
+
+<h3>local-dateime</h3>
+<label for="dtl">local-time</label><br><br>
+<input type="datetime-local" name="dtl" id="dtl"><br> <br>
+<input type="submit" value="send">
+
+<hr>
+
+
+<!-- Тип ввода Электронная почта -->
+<!-- 
+
+<input type="email"> используется для полей ввода в которых должен указан 
+адрес электронной почты.
+
+В зависимости от подержки браущером адрес электронной почты может автоматически
+проверятся при отправке  
+
+Некоторые смартфоны распознают тип электронного аддреса и добавляют к коавиатруе 
+".com" , чтобы соответсвовать флрмату ввода алреса ждектронно почты
+-->
+
+<form action="">
+<h3>email</h3>
+<label for="email">Input your email</label> <br>
+<input type="email" id="email" name="email"> <br>
+
+<input type="submit" value="send">
+</form>
+
+<hr>
+
+<!-- Тип входного сигнала Изобоажение -->
+
+<!--  
+<input type="image"> обозначает изображение в качетсве кнопки отправки 
+
+Путь к изобрадению указан в атрибуте 'src'
+-->
+
+<form>
+    <h3>image</h3>
+    <input type="image" src="https://i.pinimg.com/originals/34/db/9c/34db9c5bb5fac988970014e56ace8d96.gif" alt="buyuk shoir" height="100" width="100">
+</form>
+
+<hr>
+
+<!-- Фвйл выходного типа -->
+<!--  
+<input type="file"> обозанчает поле для выбора файла и кнопку << Обзор >>
+для загрузки файлов
+-->
+
+<form>
+    <h3>file</h3>
+    <label for="d-file">choose a file</label> <br>
+<input type="file" id="d-file"> <br> <br>
+<input type="submit">
+</form>
+
+<hr>
+
+
+
+
+<!-- Тип ввода Скрытый  -->
+
+<!-- <input type="hidden"> обозначает поле ввода (невидимое для пользователя ).
+  
+Скрытое поле позволяет веб-разработчикам добоавить данные, которые не видны 
+пользователям при отправке формы
+-->
+
+<!-- 
+Примечание: хотя значение и не отображается в содердимом странице, его можно 
+увидеть (и изменить ) с помощью инструментов разработчика в любом браузере
+или функции <<Посмотреть исзодный код>>. Не используйте скрытые поля ввода в качестве 
+меры безопасности
+-->
+
+<h3>hidden</h3>
+<label for="fname">full name</label> <br>
+<input type="text" id="fname" name="fname">
+<input type="hidden" name="victim" value="victim"> <br> <br>
+<input type="submit" value="send">
+
+<hr>
+
+<!-- Тип ввода Месяц -->
+<!--
+<input type="month"> позволяет пользователю выбрать Месяц и год  
+
+В зависимости от поддердки брузером в поле ввода может отображатся
+средство выбора даты. 
+-->
+<h3>Month</h3>
+<label for="month">choose your birth month</label><br>
+<input type="month" id="month">
+
+<hr>
+<!-- Номер типа входного сигнала  -->
+<!--  
+<input type="text"> определяет однострочное текстовое
+поле ввода:
+-->
+
+<form>
+  <label for="fname">First name:
+ 
+  </label><br><input type="text" id="fname" name="fname"><br><label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+
+<hr>
+<!-- Тип ввода Пароля -->
+
+<!-- <input type="password">определяет поле для ввода пароля: -->
+
+<form>
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username"><br>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd">
+</form>
+
+<hr>
+<!-- Тип ввода Отправить -->
+<!--  
+<input type="submit">определяет кнопку для отправки данных формы в form-handler.
+
+Обработчик форм обычно представляет собой серверную страницу со скриптом для 
+обработки входных данных.
+
+Обработчик формы указан в атрибуте action формы:
+-->
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<hr>
+<!-- Сброс типа входного сигнала -->
+<!--  
+<input type="reset"> определяет кнопку сброса, которая возвращает все
+значения формы к значениям по умолчанию:
+-->
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset" value="Reset">
+</form>
+
+<hr>
+<!-- 
+Если вы измените значения в полях ввода, а затем нажмете кнопку «Сброс»,
+данные формы будут сброшены до значений по умолчанию.  
+-->
+
+<!-- Тип входного сигнала Радио -->
+<!-- 
+<input type="radio">определяет переключатель.
+
+Радиокнопки позволяют пользователю выбрать ТОЛЬКО ОДИН из ограниченного числа 
+вариантов.
+-->
+
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form>
+
+<hr>
+
+<!-- Флажок "Тип ввода" -->
+<!--
+
+<input type="checkbox"> определяет флажок.
+
+С помощью флажков пользователь может выбрать НУЛЕВОЕ или НЕСКОЛЬКО 
+вариантов из ограниченного числа доступных.
+-->
+
+<form>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label>
+</form>
+
+<hr>
+
+<!-- Кнопка ввода типа -->
+
+<!-- <input type="button"> определяет кнопку: -->
+
+<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+<hr>
+
+<!-- Тип входного сигнала Color -->
+<!--  
+<input type="color"> используется для полей ввода, в которых должен 
+быть указан цвет.
+
+В зависимости от поддержки браузера в поле ввода может отображаться 
+палитра цветов.
+-->
+
+<form>
+  <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor">
+</form>
+
+
+<!-- Тип ввода Дата -->
+<!--  
+<input type="date">Используется для полей ввода, в которых должна быть
+ указана дата.
+
+В зависимости от поддержки браузером в поле ввода может отображаться средство 
+выбора даты.
+-->
+
+<form>
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday">
+</form>
+
+<hr>
+
+<!-- Вы также можете использовать атрибуты min и max для добавления 
+ограничений к датам: -->
+
+<form>
+  <label for="datemax">Enter a date before 1980-01-01:</label>
+  <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+  <label for="datemin">Enter a date after 2000-01-01:</label>
+  <input type="date" id="datemin" name="datemin" min="2000-01-02">
+</form>
+
+<hr>
+
+<!-- Тип ввода: местное время -->
+<!--  
+<input type="datetime-local">Указывает на поле для ввода даты и времени 
+без указания часового пояса.
+
+В зависимости от поддержки браузером в поле ввода может отображаться средство 
+выбора даты.
+-->
+
+<form>
+  <label for="birthdaytime">Birthday (date and time):</label>
+  <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+</form>
+
+<hr>
+
+
+<!-- Тип ввода Электронная почта -->
+<!--  
+<input type="email">Используется для полей ввода, в которых должен быть указан
+адрес электронной почты.
+
+В зависимости от поддержки браузером адрес электронной почты может 
+автоматически проверяться при отправке.
+
+Некоторые смартфоны распознают тип электронного адреса и добавляют к 
+клавиатуре ".com", чтобы соответствовать формату ввода адреса электронной почты.
+-->
+
+<form>
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email">
+</form>
+
+<hr>
+
+<!-- Тип входного сигнала Изображение -->
+ <!--
+<input type="image">Определяет изображение как кнопку отправки.
+
+Путь к изображению указан в srcатрибуте.
+-->
+
+<form>
+<input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+</form>
+
+<hr>
+
+
+<!-- Файл входного типа -->
+ <!--  
+<input type="file">Определяет поле для выбора файла и кнопку «Обзор» для 
+загрузки файлов.
+-->
+
+<form>
+  <label for="myfile">Select a file:</label>
+  <input type="file" id="myfile" name="myfile">
+</form>
+
+<hr>
+
+<!-- Тип ввода Скрытый -->
+ <!--  
+<input type="hidden">Определяет скрытое поле ввода (невидимое для пользователя).
+
+Скрытое поле позволяет веб-разработчикам включать в форму данные, которые 
+пользователи не могут увидеть или изменить при отправке формы.
+
+В скрытом поле часто указывается запись в базе данных, которую необходимо 
+обновить при отправке формы.
+
+Примечание: Хотя значение не отображается в контенте страницы, его можно 
+увидеть (и отредактировать) с помощью инструментов разработчика в любом 
+браузере или функции «Просмотр исходного кода». Не используйте скрытый вводв 
+целях безопасности!
+-->
+
+<form>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="hidden" id="custId" name="custId" value="3487">
+  <input type="submit" value="Submit">
+</form>
+
+<hr>
+
+<!-- Тип ввода Месяц -->
+<!--  
+<input type="month">Позволяет пользователю выбрать месяц и год.
+
+В зависимости от поддержки браузером в поле ввода может отображаться 
+средство выбора даты.
+-->
+
+<form>
+  <label for="bdaymonth">Birthday (month and year):</label>
+  <input type="month" id="bdaymonth" name="bdaymonth">
+</form>
+
+<hr>
+
+
+<!-- Номер типа входного сигнала -->
+ <!--  
+<input type="number">Определяет числовоеполе ввода.
+
+Вы также можете установить ограничения на принимаемые номера.
+
+В следующем примере показано поле для ввода чисел, в котором можно указать 
+значение от 1 до 5:
+-->
+
+<form>
+  <label for="quantity">Quantity (between 1 and 5):<
+  /label><input type="number" id="quantity" name="quantity" min="1" max="5">
+</form>
+
+<hr>
+
+<!-- Диапазон типов входных данных -->
+<!--  
+<input type="range">Определяет элемент управления для ввода числа, точное 
+значение которого не имеет значения (например, ползунок). Диапазон по 
+умолчанию — от 0 до 100. Однако вы можете установить ограничения на 
+принимаемые числа с помощью атрибутов min, max и step:
+-->
+
+<form>
+  <label for="vol">Volume (between 0 and 50):</label>
+  <input type="range" id="vol" name="vol" min="0" max="50">
+</form>
+
+<hr>
+
+<!-- Поиск по типу ввода -->
+<!--  
+<input type="search">Используется для полей поиска (поле поиска работает 
+как обычное текстовое поле).
+-->
+
+<form>
+  <label for="gsearch">Search Google:</label>
+  <input type="search" id="gsearch" name="gsearch">
+</form>
+
+<hr>
+
+<!-- Тип ввода Tel -->
+ <!--  
+<input type="tel">Используется для полей ввода, в которых должен быть указан 
+номер телефона.
+-->
+
+<form>
+  label for="phone">Enter your phone number:<
+  /label><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+</form>
+
+<hr>
+
+<!-- Тип входного сигнала Time (Время) -->
+ <!--  
+<input type="time">Позволяет пользователю выбрать время (без указания часового 
+пояса).
+
+В зависимости от поддержки браузера в поле ввода может появиться средство 
+выбора времени.
+-->
+
+<form>
+  <label for="appt">Select a time:</label>
+  <input type="time" id="appt" name="appt">
+</form>
+
+<hr>
+
+<!-- Тип ввода URL -->
+<!--  
+<input type="url">Используется для полей ввода, которые должны содержать
+ URL-адрес.
+
+В зависимости от поддержки браузером поле URL может автоматически проверяться 
+при отправке.
+
+Некоторые смартфоны распознают тип URL-адреса и добавляют к клавиатуре ".com", 
+чтобы соответствовать вводу URL-адреса.
+-->
+
+<form>
+  <label for="homepage">Add your homepage:</label>
+  <input type="url" id="homepage" name="homepage">
+</form>
+
+<hr>
+
+
+
+<!-- Тип ввода Неделя -->
+<!--  
+<input type="week">Позволяет пользователю выбрать неделю и год.
+
+В зависимости от поддержки браузером в поле ввода может отображаться средство 
+выбора даты.
+-->
+
+<form>
+  <label for="week">Select a week:</label>
+  <input type="week" id="week" name="week">
+</form>

@@ -1,0 +1,60 @@
+<!-- HTML iframes -->
+<!-- 
+HTML- элемент используется для отображения веб-страницы внутри другой 
+веб-страницы 
+-->
+
+<!-- Синтаксис HTML Iframe -->
+<!-- Тег HTML <iframe> обозначает встроенный фрейм -->
+
+<!-- 
+Встроенный фрейм используется для встраивания другого документа в
+текущий HTML-документ.
+-->
+
+<!-- пример -->
+
+<iframe src="url" title="description"></iframe>
+
+<br>
+<!-- 
+Рекомендуется всегла добавить атрибут 'title' для 
+<iframe>. Это нужно для программ чтения с экрана , 
+чтобы они могли считать содержимое iframe
+-->
+
+<!-- Iframe - установка высоты и ширины  -->
+<!-- 
+Используйте атрибуты 'height' и 'width' для указания 
+размера <iframe>.
+
+По умолчанию высота и ширина указываются в прикселях
+-->
+
+<!-- пример -->
+<h2>iframe с height и width</h2>
+<iframe src="https://najottalim.uz/" height="400" width="500" title="Это игровой сайт под нащванием 'Steam' " ></iframe>
+
+<br>
+<!-- iframe удаление рамки  -->
+<!--
+По умолчанию iframe имеет рамку 
+Чтобы убрать рамку , добваить атрибут 'frameborder' и назначайте его 0  
+-->
+
+<!-- пример -->
+<h3>Atrribute frameborder</h3>
+<iframe src="https://store.steampowered.com/" frameborder="0"></iframe>
+
+<br>
+<!-- iframe - цель для ссыкли  -->
+<!-- 
+В качестве целевого фрейма для ссылки можно использовать <iframe> 
+
+Атрибут 'target' ссылки должен соответсвовать атрибуту 'name' iframe.
+-->
+<!-- пример -->
+
+<h3>Iframe target to class</h3>
+<iframe src="url" name="target" frameborder="1" width="500" height="500"></iframe>
+<a href="https://najottalim.uz/" target="target">button</a> 

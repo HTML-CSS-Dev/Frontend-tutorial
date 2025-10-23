@@ -1,0 +1,56 @@
+/* CSS Увет границы */
+/* 
+Свойство 'border-color' используется для установки цвета четырех
+границ 
+*/
+
+/* 
+Цвет можно настроить с помощью:
+name - например <<red>>
+HEX - #ff0000
+RGB -rgb(255,0,0)
+HSL - hsl(0, 100%, 50%)
+прозрачный
+*/
+
+/* 
+Примечание: если 'border-color' не задано, цвет наследуется от 
+элемента 
+*/
+
+.dotted {
+    border-style:dotted;
+    border-width:2px 2px 2px 2px; 
+    border-color:#ff0000;
+}
+
+.double {
+    border-style:double;
+    border-width:2px 5px 2px 5px ;
+    border-color:rgba(0,255,0, 0.5)
+}
+
+.dashed {
+    border-style:dashed;
+    border-width:3px 5px 3px 5px;
+    border-color:hsl(240, 100%, 50%)
+}
+
+.solid {
+    border-style:solid;
+    border-width:3px 5px 3px 5px;
+    border-color:seagreen;
+}
+
+/* Конкретные Боковые цвета */
+/* 
+Свойство "border-color" можеь иметь от одного до четырех значений 
+(для верхней границы, правой границы, нижней границы и левой границы)
+*/
+
+.inset {
+    border-style:inset;
+    border-width:2px 5px 2px 5px;
+    border-color:hsl(24, 100%, 50%)  rgb(0,255,0) lightblue #000000
+}
+

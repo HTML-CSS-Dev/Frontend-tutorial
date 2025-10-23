@@ -1,0 +1,84 @@
+/* CSS Повторное фонового изображения */
+
+/* CSS background-repeat */
+/* 
+Свойство "background-repeat" определяет , будет ли фоновое 
+изображение повторться и каким образом.
+
+По умолчанию фоновое изображение повторяется как по вертикали, 
+так и по горизонтали.
+
+Некоторые изображения следует повторять только по горизонтали
+или вертикали , иначе они будут выглядеть странно , как в этом 
+примере
+*/
+
+/*  
+body {
+    background-image:url('images/instagramm.png'); 
+}
+*/
+
+/* CSS: фоновое повторение по горизонтали */
+/* 
+
+Если изображение выше будет повторятся только по горизонтали 
+(background-repeat:repeat-x;) фон будет выглядеть лучше:
+
+*/
+
+/* 
+body {
+    background-image: url('images/google.png');
+    background-repeat:repeat-x;
+}
+
+*/
+
+
+/* 
+Совет: чтобы повториь изображение только по вертикали,используйте
+(background-repeat:repeat-y)
+ */
+
+ /*
+body {
+    background-image: url('images/google.png');
+    background-repeat: repeat-y;
+    height:2000px;
+}
+*/
+
+/* CSS background-repeat: без повтора */
+/* 
+Свойство 'background-repeat:no-repeat' также позволяет 
+отображать фоновое изображение только один раз:
+*/
+
+
+/*
+body {
+    background-image: url('images/instagramm.png');
+    background-repeat: no-repeat;
+    height:1000px;
+}
+*/
+
+
+
+
+/* CSS background-position */
+/* 
+Свойство 'background-position' используется для утсановки 
+начальной позиции фонового изображения.
+
+По умолчанию фоновое изоюражения распологается в верхнем левом
+углу элемента.
+*/
+
+body {
+    background-image: url('images/green-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center top left;
+    height: 900px;
+}

@@ -1,0 +1,251 @@
+<!-- HTML Семантические элементы -->
+
+<!-- 
+Семантические элементы = элементы , имеющие значеия 
+-->
+
+<!-- Семантические элемент четко описывает свое значение как для 
+браузера так и для разработчика.
+
+Примеры несемантические элементов: <div> и <span> - ничего не говорят о 
+содержании.
+
+Примеры несемантических элементов : <img> <table> и <article> -
+четко определюяь его содержание.
+
+-->
+
+<!-- Семантические элементы в HTML -->
+
+<!-- 
+Многие веб-сайты содержат HTML-код, например: <div id="nav"> 
+<div class="header"> <div id="footer"> для обозначения навигации, 
+верхнего и нижнего колонтитулов.
+
+В HTML есть несколько семантических элементов, которые можно использовать 
+для обозначения различных частей веб-страницы:
+-->
+
+<header></header>
+<section></section>
+<footer></footer>
+
+<article></article>
+<aside></aside>
+<summary></summary>
+<details></details>
+<main></main>
+<nav></nav>
+<time></time>
+<mark></mark>
+<figure></figure>
+<figcaption></figcaption>
+
+
+<!-- section -->
+<!-- Элемнет <section> определяет раздел в документе  -->
+<!-- пример использования < section > 
+
+-главы
+-введение
+-новостные материалы 
+-контактная информация
+
+Обычно веь-страницу можно разделить на разделы : вступление , содержание 
+и контакная информация.
+-->
+
+<section>
+<h1>WWWF</h1>
+<p>
+The World Wide Fund for Nature (WWF) is an international organization  <br>
+working on issues regarding the conservation, research and restoration <br>
+of the environment, formerly named the World Wildlife Fund. WWF was <br>
+founded in 1961.
+</p>
+</section>
+
+<section>
+    <h1>WWF's Panda symbol</h1>
+<p>The Panda has become the symbol of WWF. The well-known panda logo of <br>
+WWF originated from a panda named Chi Chi that was transferred from the <br>
+Beijing Zoo to the London Zoo in the same year of the establishment of <br>
+WWF.</p>
+</section>
+
+<hr>
+
+
+<!-- article -->
+<!-- Элемнет HTML <article> -->
+<!-- 
+Элемент <article> обозначает независимое , самодостаточное содержание  
+
+Статья должна быть самодостаточным , и ее можно должно быть опуюлтковать 
+отдельно от остаточного контента сайта.
+-->
+
+<!-- примеры использования <article> элемента 
+
+- сообщение на форуме 
+- публикация блога
+- клментарии пользователей 
+- карточки продуктов
+- газетные стати
+-->
+
+<h1>The article element</h1>
+
+<article>
+<h2>Google Chrome</h2>
+<p>Google Chrome is a web browser developed by Google, released in 2008.<br>
+Chrome is the world's most popular web browser today!</p>
+</article>
+
+<article>
+<h2>Mozilla Firefox</h2>
+<p>
+Mozilla Firefox is an open-source web browser developed by Mozilla. <br>
+Firefox has been the second most popular web browser since January, 2018.
+</p>
+</article>
+
+<article>
+<h2>Microsoft Edge</h2>
+<b>Microsoft Edge is a web browser developed by Microsoft, released in <br>
+ 2015. Microsoft Edge replaced Internet Explorer.</b>
+</article> 
+
+<!-- article with styles -->
+
+<body style="background-color: lightgray;">
+<h1>Most Popular browsers</h1>
+
+<article style="border:3px solid white;background-color: white; ">
+<h2>Google Chrome</h2>
+<p>Google Chrome is a web browser developed by Google, released in 2008.<br>
+Chrome is the world's most popular web browser today!</p>
+</article>
+
+<article style="border:3px solid white;background-color: white; ">
+<h2>Mozilla Firefox</h2>
+<p>
+Mozilla Firefox is an open-source web browser developed by Mozilla. <br>
+Firefox has been the second most popular web browser since January, 2018.
+</p>
+</article>
+
+<article style="border:3px solid white;background-color: white">
+<h2>Microsoft Edge</h2>
+<b>Microsoft Edge is a web browser developed by Microsoft, released in <br>
+ 2015. Microsoft Edge replaced Internet Explorer.</b>
+</article> 
+</body>
+
+
+
+<!-- Вложить <article> в <section> или наоборот-->
+
+<!-- 
+Можем ли мы использовать определения, чтобы решить, как расположить 
+эти элементы? Нет, не можем!   
+
+Итак, вы найдёте HTML-страницы с элементами <section>, содержащими 
+элементы <article>, и элементами <article>, содержащими элементы 
+<section> .
+-->
+
+
+<!-- header -->
+<!-- 
+Элемент <header> представляпет собой контейнер для ввода контента или 
+набора навигационных ссылок.
+
+Элемент <header> обычно содержит :
+- один или несколько элементов (<h1> - <h6>)
+- логотип или иконка
+- информация обавторстве
+-->
+
+<!-- 
+Примеание а оодном HTML-документе может быть несколько <header> 
+элементов. Однако <header> нельзя поместить внутри <footer>,<address>,
+или другого <header> элемнета.
+-->
+
+<header>
+    <h1>What Does WWF Do?</h1>
+<p>WWF's mission:</p>
+<p>
+WWF's mission is to stop the degradation of our planet's natural <br> 
+environment, and build a future in which humans live in harmony with <br>
+nature.</p>
+</header>
+
+
+<!-- footer -->
+<!-- 
+Элемент <footer> отвечает на самый нижний часть 
+
+<footer> элемнет в основном содержит из
+- информации автора
+- информация об авторчких прав
+- контакные информации
+- карта сайта
+- вернутся к началу сайта
+- документы
+-->
+
+<footer>
+<p>Author: Hege Refsnes</p>
+<a href="mailto:ranaldu456@gmail.com">ranaldu457@gmail.com</a>
+</footer>
+
+<!-- вы можете иметь несколько <footer> элементов в html документе -->
+
+
+<!--  nav -->
+<!-- элемент <nav> отвечает на навигационнцю линки-->
+<!-- 
+Не все навигационные линки должны распологатся внутри элемента <nav>.
+Она в основном положены быть поставлены на болших навигационных 
+блоках    
+
+Этот элемент нужно чтобы люжи с ограничениями могли узанть должни ли
+они пропускать или нет.
+-->
+
+<nav>
+<ul>
+    <li style="display: inline; list-style:none;"><a href="url">Lorem.</a></li>
+    <li style="display: inline; list-style:none;"><a href="url">Lorem.</a></li>
+    <li style="display: inline; list-style:none;"><a href="url">Lorem.</a></li>
+    <li style="display: inline; list-style:none;"><a href="url">Lorem.</a></li>
+    <li style="display: inline; list-style:none;"><a href="url">Lorem.</a></li>
+</ul>
+</nav>
+
+
+<!-- aside -->
+<!-- html <aside> элемнет -->
+
+<!-- 
+Элемент <aside> определяет некоторое содержимое, отличное от 
+содержимого, в которое он помещен (например, боковую панель).  
+-->
+
+<!-- figure and figurcation -->
+
+<!-- 
+Элемент <figure> содержит такие элементы как иллюстрации, схемы, 
+фотографии, фрагменты кода и т. д.
+
+Элемент <figcation> пишет коментарии для элемент <figure>. 
+Элемент <figcaption> может быть расположено до или полсе основного 
+контента <figure>  
+-->
+
+<figure>
+    <figcaption>Albert Ainshtain</figcaption>
+<img src="albert.jpg" alt="albert ainshtain">
+</figure>

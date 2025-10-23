@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="css_atrr_selector.css">
+</head>
+<body>
+<h3>Только с названием атрибута и элемента</h3>
+<a href="" target>this is a link</a> 
+<hr>
+<h3>С точным названием атрибута и его елемента и его значения </h3>
+<a href="" title="salom">Salom</a>
+<a href="" title="hello">hello</a>
+<hr>
+<h3>Выбирает элементы с одинаковым название атрибута и его значенем 
+если даже их несколько но должна совападать одна из них     
+</h3>
+<p title="hello world lorem1">Lorem.</p>
+<pre title="hello lorem1">Lorem.</pre>
+
+<hr>
+<h3>Выбирает значение если даже поставлен - </h3>
+<p title="privet-davay">lorem1</p>
+<i title="privet">Lorem.</i>
+<hr>
+<h3>Выбирает любой значение но с одинаковым началом</h3>
+<p title="hello">Lorem.</p>
+<div title="hello-world"></div>
+<span title="hellospan">Lorem.</span>
+<hr>
+<h3>выбриает любое значение нос одинаковым концом</h3>
+<p title="paragraphhello">Lorem.</p>
+<address title="paragrap-hello">Lorem.</address>
+<span title="paragraph hello">Lorem.</span>
+<hr>
+<h3>выбирает элементы даже если она не полная но хотябы малейшие схожие </h3>
+<p title="emphasize">Lorem.</p>
+<span title="empty">Lorem.</span>
+<h3></h3>
+<label for="name">name</label><br>
+<input type="text" id="name"><br>
+
+<label for="search">search</label><br>
+<input type="search" id="search" maxlength="18">
+</body>
+</html>

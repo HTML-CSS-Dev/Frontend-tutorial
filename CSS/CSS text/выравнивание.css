@@ -1,0 +1,233 @@
+/* Выравнивание тексат CSS */
+/* 
+Мы рсмторим следующие свойтсва
+*/
+
+/* 
+text-align 
+text-align-last
+vertical-align
+direction
+unicode-bidi
+*/
+
+/* Выравнивание текста */
+/* 
+Свойство "text-align" используется для настройки горизонтального 
+выравнивания текста.
+
+Это свойство может принимать одно из следующих значений.
+
+left - выравнивает текст по левому краю
+right - выравнивает текст по правому краю
+center - центрирует текст
+justify - растягивает линии так , чтобы все они были одинаковой ширины.
+*/
+
+.text-align-center {
+    border:1px solid red;
+    text-align: center;
+}
+
+.text-align-left {
+    border:1px solid red;
+    text-align: left;
+}
+
+.text-align-right {
+    border:1px solid red;
+    text-align: right;
+}
+
+.text-align-justify {
+    border:1px solid red;
+    text-align:justify;
+    padding:10px
+}
+
+
+/* 
+Когда text-align свойтсво задано значение "justify" ,
+каждая строка растягиватеся так, чтобы все строки 
+имели одинаковую ширину , а левое и правое поля были 
+ровными (как в журналах и газетах).
+*/
+
+
+
+/* Последняя выравнивание текста */
+/* 
+Свойство 'text-align-last' определяет, как выравнивать последнюю 
+строку текста.
+
+Это свойство может принимать одно из следующих значений.
+
+auto - значение по умолчанию Последняя строка выровнена по левому краю
+left - Последняя строка выровнена по левому краю
+right - Последняя строка выровнена по правому краю
+center - Последняя строка выровнена по центру
+justify - Последняя строка выровнена так же как и остальные 
+start - последняя строка выровнена по началу строки 
+end - последняя строка выровнена по правому краю
+*/
+
+
+/* auto */
+.text-align-last-auto {   
+    text-align-last:auto;
+    border: 1px solid red;
+}
+
+/* left */
+.text-align-last-left {
+    text-align-last:left;
+    border: 1pt solid red;
+}
+/* right */
+.text-align-last-right {
+    text-align-last:right;
+    border: 1pt solid red;
+}
+
+/* justify */
+.text-align-last-justify {
+    text-align-last:left;
+    border: 1pt solid red;
+}
+/* start */
+
+.text-align-last-start {
+    text-align-last:start;
+    border: 1px solid red;
+}
+
+/* end */
+.text-align-last-end {
+    text-align-last:end;
+    border: 1px solid red;
+}
+
+/* Вертикальное Выравние  */
+/* 
+Свйотсво 'vertical-align' задает вертикальное выравнивание элемента.
+
+Это свойство может принимать одно из следующих значений:
+
+baseline - значение по умолчанию.Элемент выровен по базовой линии
+родительского элемента.
+
+length / % - поднимает или опускает элемент на указанную величину 
+или процент 
+
+sub - элемент выровен по нижней гранце нижнего индекса родительского 
+элемента
+
+super - элемент выровен по верхней границе родительского элемента
+
+top - Элемент выровен по верхней границе самого высокого элемента в
+строке 
+
+text-top - элемент выровен по верхней границе шрифта родительского 
+элемента
+
+middle - элемент расположен в центре родительского элемента
+
+bottom - элемент выровен по нижнему элементу в строке 
+
+text-bottom- эдемент выровенпо нижней границе шрифта родительского 
+элемента.
+*/
+
+
+/* baseline */
+.vertical-align-baseline {
+    vertical-align:baseline;
+    border: 1px solid red;
+}
+.vertical-align-baseline span {
+    vertical-align:baseline
+}
+/* length/ % */
+.vertical-align-length {
+    border: 1px solid red;
+}
+
+.vertical-align-length span{
+    vertical-align:20px;
+}
+
+/* sub */
+.vertical-align-sub {
+    border: 1px solid red;
+}
+
+.vertical-align-sub span {
+    vertical-align:sub;
+}
+/* super */
+.vertical-align-super {
+    border: 1px solid red;
+}
+
+.vertical-align-super span {
+    vertical-align:super;
+}
+/* top */
+.vertical-align-top {
+    border: 1px solid red;
+    padding:20px;
+}
+
+.vertical-align-top img {
+    vertical-align:top;
+    border: 1px solid red;
+}
+
+/* text-top */
+.vertical-align-text-top {
+    border:1px solid red
+}
+
+.vertical-align-text-top img {
+    vertical-align:text-top;
+    border:1px solid red;
+}
+
+/* middle */
+.vertical-align-middle {
+    border:1px solid red
+}
+
+.vertical-align-middle img {
+    vertical-align:middle;
+    border:1px solid red;
+}
+
+/* bottom */
+.vertical-align-bottom {
+    border:1px solid red
+}
+
+.vertical-align-bottom img {
+    vertical-align:bottom;
+}
+/* text-bottom */
+.vertical-align-text-bottom {
+    border:1px solid red
+}
+
+.vertical-align-text-bottom img {
+    vertical-align:text-bottom;
+}
+
+/* Text Direction */
+
+/* 
+Свойство 'direction' определяет направление текста / написание в 
+пределах элемента блончного уровня.
+*/
+
+.direction {
+    border: 1px solid red;
+    direction: rtl;      /* rtl- right to left , ltr - left to right*/
+}

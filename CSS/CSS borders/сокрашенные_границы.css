@@ -1,0 +1,56 @@
+/* CSS Сокрашенное свойство border  */
+
+/* 
+Чтобы сократить код, можно указать все отдельные свойства границы 
+в одном свойстве.
+
+Свойство 'border' является сокращенным обозначением для следующих
+отдельных свойств границы.
+
+border-width
+border-style (обязательно)
+border-color
+*/
+
+/* это все разделенное */
+.by-details{
+    border-style:solid;
+    border-color:red;
+    border-width:3px
+}
+
+/* это все в одном */
+.all-in-one {
+    border:3px solid red
+}
+
+
+/* 
+Вы также можете указать все отдельные свойства границы только для 
+одной стороны: 
+
+border-left
+border-right
+border-top
+border-bottom
+*/
+
+/* border-top */
+.border-top {
+    border-top:3px solid rgb(0, 255, 0)
+}
+
+/* border-bottom */
+.border-bottom{
+    border-bottom:3px dotted #ff0000
+}
+
+/* border-left */
+.border-left{
+    border-left:3px dashed hsl(240, 100% , 50%)
+}
+
+/* border-right */
+.border-right {
+    border-right:3px double tomato
+}

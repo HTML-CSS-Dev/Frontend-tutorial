@@ -1,0 +1,33 @@
+/* CSS text transform */
+/* 
+Свойство CSS 'text-transform' используется для управления регистром текста
+в элементе.
+
+С его помошью можно преодразовать текста в прописные бцквы или сделать
+первую букву каждого слова заглавной, не изменяя исходное сожержание 
+в HTML.
+
+Это свойство может иметь одно из следующих значений .
+
+none - текст отобрадается как и есть 
+capitalize - преобразует первый символ каждого слова в заглавную букву  
+uppercase - преобразует все символы в верхней регистр 
+lowercase - преобразует все символы в нижний регистр.  
+*/
+
+
+.text-transform-none {
+    text-transform: none;
+}
+
+.text-transform-capitalize {
+text-transform:capitalize
+}
+
+.text-transform-lowercase {
+    text-transform: lowercase;
+}
+
+.text-transform-uppercase {
+    text-transform:uppercase;
+}

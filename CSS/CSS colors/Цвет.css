@@ -1,0 +1,106 @@
+/* HTML цвета */ 
+/* 
+Цвета в HTML задауют с помошью преустановленных названий цветов 
+или значениях RGB , HEX , HSL , RGBA, или HSLA.
+*/
+
+ /* Название цветов   */
+/* В HTML цвет можно указать с помошью название цвета:  */
+
+.tomato {
+    color: tomato;
+}
+.dodgerblue {
+    color: dodgerblue;
+} 
+
+.gray {
+    color:gray
+}
+
+.violet {
+    color:grey
+}
+
+.orange {
+    color:orange    
+}
+
+.mediumseagreen {
+    color:mediumseagreen
+}
+
+.slateblue {
+    color:slateblue
+}
+
+.lightgray {
+    color:lightgray
+}
+
+
+ /* Цвет фона  */
+ /* Вы можете задать цвет фона для HTML-элементов. */
+.background-color{
+    background-color: tomato;
+}
+
+ /* Цвет текста   */
+ /* Вы можете задать цвет текста  */
+
+ .font-size {
+    font-size: grey;
+ }
+
+
+/* Цвет границы  */
+/* Вы можете задать цвет границ */
+
+.border {
+    border:1px solid dodgerblue;
+}
+
+
+/* Значение цвета */
+/*  
+В HTML, цвета можно задавать с помошью значений RGB, HEX, RGBS и
+HSLA.
+
+Длыя следующих трех элементов <div> задан цвет фона со значением RGB ,
+HEX и HSL.
+*/
+
+
+
+/* rgb */
+.rgb {
+    background-color: rgb(255,0,0);
+}
+
+ /* HEX  */
+.hex {
+    background-color: #ff0000;
+}
+
+/* HSL  */
+.hsl {
+    background-color: hsl(120 100% 50%);
+}
+
+
+
+/* 
+Цвет фона следующих двух элементов <div> задан с помошью значений RGBA
+и HSLA котрые добавляют к цвету альфа-канал (здесь прозрачность составляет
+ 50 %)
+*/
+
+/* rgba  */
+.rgba {
+    background-color: rgba(0,0,255, 0.5);
+}
+
+/* HSLA  */
+.hsla {
+    background-color: hsla(24 , 100%, 50%, 0.7);
+}

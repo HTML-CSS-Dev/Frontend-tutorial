@@ -1,0 +1,26 @@
+/* CSS Фоновое изображение  */
+
+/* CSS background-фоновое изображение */
+/* 
+Свойство 'background-image  указывает на изображение , которое
+будет использоватся в качестве фона элемента 
+
+По умолчанию изображение повторяется , чтобы заполнить весь 
+элемент.
+*/
+
+body {
+    background-image: url('images/google.png');
+    /* background-image: url('images/google.png'); */
+}
+
+/* 
+Фоновое изображение также можно задать для отдельных элементов,
+напрмер для элемента <p>: 
+*/
+
+
+div {
+    height:900px;
+    background-image: url('images/instagramm.png');
+}

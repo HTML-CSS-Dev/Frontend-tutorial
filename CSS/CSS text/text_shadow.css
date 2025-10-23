@@ -1,0 +1,58 @@
+/* CSS Текстовая тень */
+/* 
+Тень текста CSS
+*/
+
+/* 
+Свойствл "text-shadow" добавляет тень к тексту
+
+В самом простом варианте вы указываете только горизонтальные и вертикальные 
+тени.
+
+Кроме того , вы можете добавить цвет тени и эффект размытия.
+
+*/
+
+
+/* Горизонтальная и вертикальная тень: */
+
+.text-shadow {
+    text-shadow: 1px 1px ;
+}
+
+/* Горизонтальная и вертикальная тень:цветная: */
+
+.text-shadow-color {
+    text-shadow: 1px 1px red;
+}
+
+/* Горизонтальная и вертикальная тень с эффектом цвета и размытия: */
+
+.text-shadow-color-flow {
+    text-shadow: 1px 1px 5px red;
+}
+
+
+/* Множество Теней */
+/* 
+Свойство text-shadow также позволяет задать несколько теней 
+для элемента. Укажите каждую тень в списке через запятую. 
+*/
+
+.text-shadow-color-flow-multiple {
+    text-shadow: 1px 1px 5px red, 1px 1px 10px green
+}
+
+
+
+/* 
+color
+
+text-align , text-align-last, vertical-align , direction,
+
+text-decoration-style, text-decoration-line, text-decoration-color, text-decoration-thickness,text-decoration 
+
+text-transform
+
+text-indent, letter-spacing , word-sapcing, white-spacing, line-height , 
+*/

@@ -1,0 +1,44 @@
+/* CSS Сокрашение для фона */
+
+/* CSS background - сокращенное свойство */
+
+/* Чтобы сократить код, можно указать все свойства фона в одном 
+свойстве . Это называется сокрашенным свойством.
+*/
+
+/* Вместо того чтобы писать: */
+
+/* 
+body {
+    background-image: url('images/green-background.jpg');
+    background-repeat:no-repeat;
+    background-position: right top;
+    height: 900px;
+    background-attachment: fixed;
+}
+
+*/
+
+/* можно использовать сокрашенное свойство 'background' */
+
+
+body {
+    background:url('images/green-background.jpg') no-repeat right top fixed;
+    font-size: 50px;
+}
+
+/* 
+При использовании сокращенного свойства порядок значений свойства
+слежующих
+*/
+
+/* 
+background-color
+background-image
+background-position
+background-size
+background-repeat
+background-origin
+background-clip
+background-attachment
+*/
