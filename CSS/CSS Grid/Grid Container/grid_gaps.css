@@ -1,0 +1,96 @@
+/* CSS Разрыв в сетке */
+/* 
+Промежутки межлу строками и столбцами в сетке называются пробелами (или
+отступами).
+
+Пробелы создаются между строками и столбцами сетки, а не по 
+внешнему краям контейнера сетки.
+*/
+
+/* По умолчанию размер отступа равен 0 , то есть между элементами сетки 
+нет промежутков. 
+
+Размер зазора можно регулироровать с помошью следующих свойств:
+    column-gap-указывается расстояние между стобцами сетки
+    row-gap-указывает расстояние межлу строками сетки
+    gap-слкращенное свойство для 'row-gap' и 'column-gap'
+*/
+
+/* Свойство CSS column-gap */
+/* 
+Свойство 'column-gap' определяет расстояние между столбцами в сетке.
+*/
+
+.column-gap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap:5px
+}
+
+.column-gap > .cards {
+    background: black;
+    height: 50px;
+    font-size: 4vw;
+    text-align: center;
+    color:white
+}
+
+/* Свойство CSS row-gap */
+/* 
+Свойство 'row-gap' определяет расстояние между строками в таблице
+*/
+
+.row-gap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap:5px;
+}
+
+.row-gap > .cards {
+    background: black;
+    height: 50px;
+    font-size: 4vw;
+    text-align: center;
+    color:white
+}
+
+/* Своство CSS gap */
+/* 
+Свойство 'gap' - это сокращенное запись для 'row-gap' и 'column-gap'.
+
+Если указано одно значение , оно применяется к обеим строкам и столбцам.
+
+Если указаны два значения , то первое значение определяет 'row-gap',
+а второе - column-gap.
+*/
+
+/* .gap {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    column-gap:5px;
+    row-gap: 5px;
+}
+
+.gap > .cards {
+    height: 50px;
+    background: black;
+    font-size: 4vw;
+    text-align: center;
+    color: white;
+} */
+
+
+/* сокращенный вариант данного кода -> */
+.gap {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:5px
+}
+
+.gap > .cards {
+    height: 50px;
+    background: black;
+    font-size: 4vw;
+    text-align: center;
+    color: white;
+}

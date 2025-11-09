@@ -1,0 +1,301 @@
+/* Вравнивание css grid элементы */
+/* 
+Элементы сетки можно выровнять внутри соответствующих ячеек сетки с 
+помощю таких свойств как:
+
+    -justify-self - указывает на горищонтальное выравнивание 
+    внутри ячейки.
+    -align-self - указывает на вертикальное выравнивание внутри 
+    ячейки. 
+    -place-self - сокращенное свойство для 'align-self' и 
+    'justify-self'. 
+
+Их также можно применить ко всем элементам секти в контейнере, 
+используя 'justify-items' и 'align-items' в контейнере сетки. 
+*/
+
+
+/* Свойство CSS 'justify-self' */
+/* 
+Свойство 'justify-self' используется для выравниявания элемента
+сетки внутри ячейки сетки в строчном направлении.
+
+Совет:На страницах на английском языке строчное направление - 
+слева направо, а блочное - сверху вниз.
+*/
+/* Это свойсво может иметь одно из следующих значений */
+/* 
+-auto (default)
+-normal
+-stretch
+-start
+-left
+-center
+-end
+-right
+*/
+
+/* Примечание: чтобы это свойство повлияло на выравниание , вокруг 
+элемента сетки должна быть свободное пространство в направлении 
+строки.  
+*/
+
+  /* -auto (default)
+-normal
+-stretch */
+
+
+
+/* auto, normal , stretch - default */
+.justify-self-auto {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(3,50px);
+    height:200px;
+    width: 200px;
+}
+
+.justify-self-auto > .cards {
+    border: 1px solid black;
+    height: 50px;
+    justify-self:normal /*auto, stretch , normal*/
+}
+
+.justify-self-auto > .card {
+    border: 1px solid black;
+    height: 50px;
+    font-size: 1.5vw;
+    justify-self:stretch /*auto, stretch , normal*/
+}
+
+/* start- сам элемент уходит на насальную сторону по горизонтали */
+
+.justify-self-start {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(3,50px);
+    height:200px;
+    width: 200px;
+    justify-content: center;
+}
+
+.justify-self-start > .cards {
+    border: 1px solid black;
+    height: 50px;
+}
+
+.justify-self-start > .card {
+    border: 1px solid black;
+    height: 50px;
+    justify-self:start
+}
+
+/* end - перемещается в конец по горизонтали */
+
+.justify-self-end {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(3,50px);
+    height:200px;
+    width: 200px;
+}
+
+.justify-self-end > .cards {
+    border: 1px solid black;
+    height: 50px;
+}
+
+.justify-self-end > .card {
+    border: 1px solid black;
+    height: 50px;
+    justify-self:end;
+}
+
+
+/* left - переходит по левой части по горизонтали*/
+.justify-self-left {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(3,50px);
+    height:200px;
+    width: 200px;
+    justify-content: center;
+}
+
+.justify-self-left > .cards {
+    border: 1px solid black;
+    height: 50px;
+}
+
+.justify-self-left > .card {
+    border: 1px solid black;
+    height: 50px;
+    justify-self:left;
+}
+
+
+/* right - переходит по правой части */
+
+.justify-self-right {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(3,50px);
+    height:200px;
+    width: 200px;
+    justify-content: center;
+}
+
+.justify-self-right > .cards {
+    border: 1px solid black;
+    height: 50px;
+}
+
+.justify-self-right > .card {
+    border: 1px solid black;
+    height: 50px;
+    justify-self:right
+}
+
+/* center - переходит по центру */
+
+.justify-self-center {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(3,50px);
+    height:200px;
+    width: 200px;
+    /* column-gap:20px */
+}
+
+.justify-self-center > .cards {
+    border: 1px solid black;
+    height: 50px;
+}
+
+.justify-self-center > .card {
+    border: 1px solid black;
+    height: 50px;
+    justify-self:center 
+}
+
+
+
+/* Свойство CSS align-self */
+/* 
+Свойство 'align-self' используется для выравнивания элемента сетки 
+внутри ячейки сетки в направлении блока.
+*/
+/* Это свойство может иметь одно из следующих значений: */
+/* 
+ -auto (default)
+ -normal
+ -stretch
+ -start
+ -end
+ -center
+*/
+
+/* Примечание: чтобы это свойство влияло на выравнивание , элементу 
+четки необходимо свобожное пространство вокруг в направлении блока.*/
+
+
+/* auto (default), normal, stretch */
+
+/* start - выравнивает по вертикалт по началу */
+.align-self-start {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(3,50px);
+    height:200px;
+    width: 200px;
+    justify-content: center;
+}
+
+.align-self-start > .cards {
+    border: 1px solid black;
+    height: 50px;
+}
+
+.align-self-start > .card {
+    border: 1px solid black;
+    height: 50px;
+    align-self:start;
+}
+
+/* end */
+.align-self-end {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(3,50px);
+    height:200px;
+    width: 200px;
+    justify-content: center;
+}
+
+.align-self-end > .cards {
+    border: 1px solid black;
+    height: 50px;
+}
+
+.align-self-end > .card {
+    border: 1px solid black;
+    height: 50px;
+    align-self:end;
+}
+
+/* center */
+.align-self-center {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(3,50px);
+    height:200px;
+    width: 200px;
+    justify-content: end;
+}
+
+.align-self-center > .cards {
+    border: 1px solid black;
+    height: 50px;
+}
+
+.align-self-center > .card {
+    border: 1px solid black;
+    height: 50px;
+    align-self:center;
+}
+
+
+/* place-self -> это shorthand свойств justify-align и 
+align-self */
+
+.place-self {
+    display: grid;
+    grid-template-columns:50px 50px;
+    border: 1px solid black;
+    height:200px;
+    width: 200px;
+}
+
+
+.place-self > .card {
+    border: 1px solid black;
+    place-self:center right;
+    height: 50px;
+}
+
+
+/* align-items justify-items - они работают ко всем элементам */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    height:200px;
+    width: 200px;
+    border: 1px solid black;
+    justify-items:center;
+    align-items:center
+}
+
+.cards {
+    border: 1px solid black;
+    height: 50px;
+}

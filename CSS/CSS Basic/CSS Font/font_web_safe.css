@@ -1,0 +1,77 @@
+/* CSS Web Safe fonts */
+/* 
+Веб-безопасные шрифты - это шрифты Ю которые универсаотны и устнавливаются
+во всех браузерах и на всех устройтсвах.
+*/
+
+/* Резервные Шрифты */
+/* 
+Однако полностью безопасных веь-страниц шоифтов не существует. Всенда есть 
+вероятность , что шрифт не найден или установлен непраавильно.
+
+Поэтому оченб важен всегда использовать резервные шрифты.
+
+Это значит , что вам нужно добавить список резервных шрифтов в font-family 
+свойство. Если первый шрифт не работает , брвузер попробует следующий,
+потом еще один и так далее.Всегда заканчивайте список с 'sans-serif'.
+
+*/
+
+b {
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+/* Веб-безопасные шрифты для HTML и CSS */
+
+/* 
+Arial (sans-serif)
+Verdana (sans-serif)
+Tahoma (sans-serif)
+Trebuchet MS (san-serif)
+Times New Roman (serif)
+Georgia (serif)
+Garamond (serif)
+Courier New (monospace)
+Brush Script MT (cursive)
+*/
+
+/* Прм=имечение: Прежде чем публиковать свой сайт , всегда проверяйте ,
+как шрифты отображаются в разных браузерах и на разных устройтсвах ,и 
+всегда используйте запасные шрифты!
+*/
+
+.arial {
+    font-family: Arial,Verdana,Tahoma,'Trebuchet MS',"Times New Roman",Georgia,Garamond, "Cpourier New","Brush Script MT";
+}
+
+.verdana {
+    font-family: Verdana,Arial,Tahoma,"Trebuchet MS","Times New Roman", Georgia,Garamond, 'Courier New' ,"Brush Script New";
+}
+
+.tahoma {
+    font-family:Tahoma,Arial,'Trebuchet MS', "Times New Roman", Georgia, Garamond, "Courier New" , 'Brush Script New';
+}
+
+.trebuchet-ms {
+    font-family:"Trebuchet MS", Tahoma , Arial , "Times New Roman" , Georgia , Garamond, "Courier New", "Brush Script New"
+}
+
+.times-new-roman {
+    font-family:"Times New Roman" , Tahoma, Arial , "Trebuchet" , Georgia , Garamond , "Courier New" , "Brush Script New"
+}
+
+.georgia {
+    font-family:Georgia, "Times New Roman" , Tahoma , Arial , "Trebuchet" , Garamond , "Courier New", "Brush Script New"
+}
+
+.garamond {
+    font-family: Garamond, Georgia , "Times New Roman", Tahoma , Arial , "Trebuchet" , "Courier New" , "Brush Script New";
+}
+
+.courier-new {
+    font-family: 'Courier New' , Garamond , Georgia , "Times New Roman" , Tahoma , Arial , Trebuchet , "Courier New" , "Brush Script New";
+}
+
+.brush-script-mt {
+    font-family:"Brush Script MT" , Garamond , Georgia , "Times New Roman", Tahoma , Arial , Trebuchet , "Courier New" , "Brush Script New" 
+}

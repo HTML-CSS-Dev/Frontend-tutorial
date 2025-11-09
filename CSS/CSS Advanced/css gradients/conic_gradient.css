@@ -1,0 +1,71 @@
+/* CSS КОнические градиенты */
+/* 
+Функция CSS conic-gradient() создает конический градиент.
+
+Конически градиент - это градиент с цветовыми переходами ,
+расположенными вокруг центральной точки.
+
+Чтобы создать конический градиент , необходимо задать как минимум 
+два цвета.
+
+*/
+
+/* Синтаксис */
+/* background-image: conic-gradient ([from угол] [at позиция,] цвет [степень], цвет [степень], ...) */
+
+/* По умолчанию angle равен 0 градусам  , а position - центру 
+Если degree не указан , цвета будут равномерно рампределены вокруг 
+центральной точки.
+*/
+
+.conic {
+    height:200px ;
+    width: 200px;
+    background-image: conic-gradient(red, blue, green, lightgreen, lightblue, dodgerblue, purple );
+}
+
+/* коник градиент с degree */
+
+.conic-color-degree {
+    height:200px;
+    width: 200px;
+    background-image:conic-gradient(red 0deg ,red 90deg,blue 90deg, blue 180deg, green 180deg, green 270deg, yellow 270deg, yellow 360deg)
+}
+
+/* коник градиент с огрлуением */
+
+.conic-rounded {
+    margin-top: 10px;
+    height:200px;
+    width: 200px;
+    border-radius:100px;
+    background:conic-gradient(red 0deg,red 120deg, green 120deg ,green 240deg, yellow 240deg, yellow 360deg)
+}
+
+.conic-position-degree {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height:200px;
+    width: 200px;
+    background: conic-gradient(from 270deg, red , yellow , green);
+}
+
+.conic-position {
+    height:200px;
+    width: 200px;
+    background: conic-gradient(from 30deg at 70% 70%, red , yellow , green);
+}
+
+/* CSS repeating-conic-gradient() функция */
+
+/* 
+Функция CSS repeating-conic-gradient() используется для повторения 
+конического градиента.
+*/
+
+.conic-repeat {
+    margin-top:10px;
+    height:200px ;
+    width: 200px;
+    background: repeating-conic-gradient(red 20deg, blue 30deg, green 40deg);
+}

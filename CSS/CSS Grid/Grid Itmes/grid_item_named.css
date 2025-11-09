@@ -1,0 +1,169 @@
+/* CSS Именование элементов сетки */
+/* 
+CSS 'grid-template-areas' - это свойство уонткйнкрв сетки ,
+которое определяет области в макете сетки.
+
+Вы можете присвоить элементам сетки имена с помошью свойства 
+CSS 'grid-area' а затем ссылатся на имя в свойстве 
+'grid-tempalte-areas'. 
+
+Каждая область определяется в апострофах. Имена элементов сетки в 
+каждой области указывается внутри апострофа через пробел. 
+*/
+
+.container {
+    display: grid;
+    gap:10px;
+    height:200px;
+    max-width:500px;
+    grid-template-areas:"header header header header header";
+}
+
+.first {
+    grid-area: header;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.second {
+    border: 1px solid black;
+}
+
+.third {
+    border: 1px solid black;
+}
+
+.fourth {
+    border: 1px solid black;
+}
+
+.fifth {
+    border: 1px solid black;
+}
+
+.sixth {
+    border: 1px solid black;
+}
+
+/* Мы можем использовать точку (.) для обозначения элемента 
+сетки без названия.
+*/
+
+#container {
+    display: grid;
+    grid-template-areas:'myheader myheader myheader . .';
+    gap:10px;
+    height:200px;
+    width:500px;
+    margin-top: 10px
+}
+
+
+#container .first {
+    grid-area: myheader;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#container .second {
+    border: 1px solid black;
+}
+
+#container .third {
+    border: 1px solid black;
+}
+
+#container .fourth {
+    border: 1px solid black;
+}
+
+#container .fifth {
+    border: 1px solid black;
+}
+
+#container .sixth {
+    border: 1px solid black;
+}
+
+
+/* 
+Чтобы выделить две строки (две области), заключите вторую
+строку в еще один набор апострофов. 
+*/
+
+.apostrof {
+    display: grid;
+    grid-template-areas:
+    "headers headers . . ."
+    "headers headers . . .";
+    gap:10px;
+    height:200px;
+    width:500px
+
+}
+
+.apostrof .first {
+    grid-area: headers ;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.apostrof .second {
+    border: 1px solid black;
+}
+
+.apostrof .third {
+    border: 1px solid black;
+}
+
+.apostrof .fourth {
+    border: 1px solid black;
+}
+
+.apostrof .fifth {
+    border: 1px solid black;
+}
+
+.apostrof .sixth {
+    border: 1px solid black;
+}
+
+
+
+/* praktika */
+
+.block {
+    display: grid;
+    grid-template-areas:
+    "head head head head"
+    "menus main main rights"
+    "menus footers footers footers";
+    gap:10px;
+    height:200px;
+    width:200px;
+}
+
+.block > .first {
+    border: 1px solid black;
+    grid-area: head;
+}
+
+.block > .second {
+    border: 1px solid black;
+    grid-area: menus;
+}
+
+.block > .third {
+    border: 1px solid black;
+    grid-area: main;
+}
+
+.block > .third {
+    border: 1px solid black;
+}
+
+.block > .fifth {
+        border: 1px solid black;
+grid-area: footers;
+}
+

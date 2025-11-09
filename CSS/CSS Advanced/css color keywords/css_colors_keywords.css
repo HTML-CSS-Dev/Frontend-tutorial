@@ -1,0 +1,80 @@
+/* Ключевое слова цвета CSS*/
+
+/* 
+В CSS есть несколько специалных предопределенных цветовых ключевых
+слов , которые можно использовать со свойством color, 
+background-color , border-color
+*/
+
+/* 
+Специальными ключевыми словами явояются:
+
+-  transparent
+-  currentcolor
+-  inherit
+
+*
+
+/* Ключевое слово 'transparent' (прозрачный) */
+/* 
+Ключевое слово 'transparent' используется для придания цвету
+прозрачности. Оно часто применяется для создания прозрачного фона 
+для элемента.
+*/
+
+.transparent {
+background-repeat: no-repeat;
+background-size: cover;
+background-color: red transparent;
+height:200px;
+width:200px;
+border: 1px solid black;
+}
+
+/* Причечание: ключевое слово 'transparent' эквивалентно 
+rgba(0,0.0.0). Pyfxtybt wdtnf RGBA -это расширенные значения 
+цвета RGBA с альфа-каналом , который определяет непрозрачность 
+цвета.
+*/
+
+
+
+/* Ключевое слово currentcolor */
+/* 
+Ключевое слово 'currentcolor' похоже на переменную, которая 
+хранит текущее щначение свойства 'color' элемента.
+
+Это ключевое слово может быть полезным, если вы хотите , чтобы 
+определенный цвет был одинаковым во всех элементах на всей странице.
+*/
+
+.currentcolor {
+    height: 200px;
+    width: 200px;
+    color:blue;
+    border: 4px solid currentColor;
+    overflow: scroll;
+}
+
+
+/* Ключевое слово inherit (наследовать) */
+/* 
+КЛючевое слово 'inherit' указывает на то , что свойство должно 
+наследовать  значение от родительского жлемента.
+
+Ключеовое слово 'inherit' можно использовать для любого свойства 
+CSS и лююого HTML-элемента.
+*/
+
+.inherit-parent {
+    height: 200px;
+    width: 200px;
+    border: 2px solid red;
+}
+
+.inherit-parent .inherit-child {
+    height:50%;
+    width:50%;
+    border:inherit;
+}
+

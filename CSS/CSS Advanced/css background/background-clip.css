@@ -1,0 +1,59 @@
+/* CSS Background Clip */
+
+/* CSS background - свойста клипа */
+/* 
+Свойство CSS "background-clip" определяет , насколько далеко 
+должен простираться фон (цвет, изображение или градиент) внутри 
+элемента.
+
+Это свойство модет иметь одно из следующих значений:
+-   border-box - фон выходит за переделы границы. Это значение
+по умолчанию
+
+-   padding-box - фон продолжает до внутренного края границы
+-   content-box - фон доходит до края блока с контентом
+*/
+
+
+/* border-box */
+#border-box {
+    background-image: url(https://i.pinimg.com/originals/b4/a4/24/b4a42431ba8c6e9383f8db7b2f528c7f.gif);
+    background-clip: padding-box;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width:200px;
+    height:200px;
+    color:white;   
+    border: 3px dotted black;
+    background-clip: padding-box;
+    padding: 10px;  
+}
+
+/* border-box */
+#padding-box {
+    background-image: url(https://i.pinimg.com/originals/b4/a4/24/b4a42431ba8c6e9383f8db7b2f528c7f.gif);
+    background-clip: padding-box;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:200px;
+    width:200px;
+    color:white;   
+    border: 3px dotted black;
+    background-clip: border-box;
+    padding: 10px;
+}
+
+/* content-box */ 
+
+#content-box {
+    background-image: url(https://i.pinimg.com/originals/b4/a4/24/b4a42431ba8c6e9383f8db7b2f528c7f.gif);
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:200px;
+    width:200px;
+    color:white;   
+    border: 3px dotted black;
+    padding: 10px;
+}
+

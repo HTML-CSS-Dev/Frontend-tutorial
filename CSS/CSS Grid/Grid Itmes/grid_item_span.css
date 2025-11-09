@@ -1,0 +1,235 @@
+/* Элементы сетки CSS */
+/* 
+Контейнер сетки содержит один или несколько элементов сетки.
+
+Все непосредмтвпнные дочерние элементы контейнера сетки 
+автоматически становятся элементами сетки.
+
+*/
+
+/* CSS Sizing/Spanning Grid Items*/
+/* 
+Элемент сетки может занимать несколько столбцов или строк.
+
+Мы можем указать где начинается и заканчивается элемент сетки,
+с помощью следующих свойств:
+
+-grid-column-start-Указывает , с какой строки столбца будет 
+начинаться элемент сетки 
+-grid-column-end- указывает,с какой строки столбца будет 
+заканчиватся элемент сетки.
+-grid-column- сокращенное свойство для 'grid-column-start'
+и 'grid-column-end'.  
+-grid-row-start- указывает , с какой строки будет начинаться 
+элемент сетки. 
+-grid-row-end - указывает , с какой строки будет заканчиватся 
+элемент сетки.
+-grid-row - слкращенное своство для 'grid-row-start' и
+'grid-row-end'.
+*/
+
+/* Линии между столбцами в сетке называются линиями столбцов,
+а линии между строками в сетке называются линиями строк. 
+*/
+
+
+
+/* CSS 'grid-column-start' и 'grid-column-end' */
+/* 
+СВойство 'grid-column-start' указывает, с какой строки столбца
+будет начинаться элемент сетки.
+
+Свойство 'grid-column-end' указывает , с какой строки столбца 
+будет заканчиваться элемент сетки.
+*/
+
+.grid-column {
+    display: grid;
+    gap:10px;
+    height:200px;
+    width:200px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.grid-column  .first {
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row: 1/2;
+    border: 1px solid black;
+}
+
+.grid-column  .second {
+    grid-column-start:3;
+    grid-column-end:4;
+    grid-row:1/2;
+    border: 1px solid black;
+}
+
+.grid-column  .third {
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row: 2/3;
+    border: 1px solid black;
+
+}
+
+.grid-column  .fourth {
+    grid-row: 2/3;
+    grid-column-start:2;
+    grid-column-end:3;
+    border: 1px solid black;
+}
+
+.grid-column  .fifth {
+    grid-row: 2/3;
+    grid-column-start:3;
+    grid-column-end:4;
+    border: 1px solid black;
+}
+
+
+/* Свойство CSS grid-column */
+/* 
+Свойство 'grid-column' явояется сокращенным вариантом свойств 
+'grid-column-start' и 'grid-column-end'.
+*/
+
+.grid-column-brief {
+    display: grid;
+    gap:10px;
+    height:200px;
+    width:200px;
+    border: 1px solid black;
+}
+
+.grid-column-brief  .first {
+    grid-column:1/3;
+    grid-row: 1/2;
+    border: 1px solid black;
+}
+
+.grid-column-brief  .second {
+    grid-column: 3/4;
+    grid-row:1/2;
+    border: 1px solid black;
+}
+
+.grid-column-brief  .third {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border: 1px solid black;
+}
+
+.grid-column-brief  .fourth {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    border: 1px solid black;
+}
+
+.grid-column-brief  .fifth {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    border: 1px solid black;
+}
+
+/* CSS grid-row-start и grid-row-end */
+/* 
+Свойство 'grid-row-start' указывает , с какой строки будет 
+начинаться элемент сетки.
+
+Свойство 'grid-row-end' указывает , с какой строки будет 
+заканчиваться элемент сетки.
+*/
+
+.grid-row {
+    display: grid;
+    height:200px;
+    width:200px;
+    gap:10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.grid-row .first {
+    grid-row-start:1;
+    grid-row-end:3;
+    grid-column:1/2;
+    border: 1px solid black;
+}
+
+.grid-row .second {
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column:2/3;
+    border: 1px solid black;
+}
+
+.grid-row .third {
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column:3/4;
+    border: 1px solid black;
+}
+
+.grid-row .fourth {
+    grid-row-start:2;
+    grid-row-end:3;
+    grid-column:2/3;
+    border: 1px solid black;
+}
+
+.grid-row .fifth {
+    grid-row-start:2;
+    grid-row-end:3; 
+    grid-column: 3/4;
+    border: 1px solid black;
+}
+
+/* свойство CSS grid-row */
+/* 
+Свойство 'grid-row' является сокращенным вариантом свойств
+'grid-row-start' и 'grid-row-end'. 
+
+Объединить grid-column и grid-row
+Здесь мы используем свойства grid-column и grid-row , чтобы 
+элемент сетки занимал оба столбца и обе строки.
+*/
+
+.grid-row-brief {
+    display: grid;
+    height:200px;
+    width:200px;
+    gap:10px;
+    border: 1px solid black;
+}
+
+.grid-row-brief .first {
+    grid-row:1/3;
+    grid-column:1/2;
+    border: 1px solid black;
+}
+
+.grid-row-brief .second {
+    grid-row: 1/2;
+    grid-column:2/3;
+    border: 1px solid black;
+}
+
+.grid-row-brief .third {
+    grid-row: 1/2;
+    grid-column:3/4;
+    border: 1px solid black;
+}
+
+.grid-row-brief .fourth {
+    grid-row:2/3;
+    grid-column:2/3;
+    border: 1px solid black;
+}
+
+.grid-row-brief .fifth { 
+    grid-row: 2/3;
+    grid-column: 3/4;
+    border: 1px solid black;
+}

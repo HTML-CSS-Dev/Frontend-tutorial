@@ -1,0 +1,400 @@
+/* CSS Анимации */
+/* 
+CSS позволяет анимировать HTML-элементы без использования 
+JavaScript
+*/
+
+/* Что такое CSS-анимация */
+/* 
+Анимация позволяет элемету постепенно переходить от одного стиля 
+к другому.
+
+Вы можете изменять любое количество войств CSS столько раз, сколько 
+захотите.
+
+С помощью ключевых кадров можно задать стили , которые будут 
+применяться к элементу в определенноые моменты.
+*/
+
+/* CSS-анимация: название и продолжительность */
+/* 
+Свойство 'animation-name' указывает имя анимации.
+
+Свойство "animation-duration" определяет, сколько времени должно
+пройти до завершения анимации. Если свойтсво не указано , 
+анимация не выполняется, так как значение по умолчанию равно 0. 
+*/
+
+/* Правило CSS @keyframes */
+/* 
+Если вы укажете стили CSS внутри правила @keyframes, анимация 
+будет постепенно переходить от текущего стиля к новому в 
+определенные моменты времени.
+
+Чтобы анимация заработала , ее нужно привязать к элементу.
+*/
+
+.animation {
+    height:100px;
+    width: 100px;
+    animation-name:block;
+    background:black;
+    animation-duration:2s;
+}
+
+@keyframes block {
+    from{background:blue}
+    to{transform: translateX(200px);background:green}
+}
+
+/* В приведенном выше примере мы использовали улючевые слова 
+<<from>> и << to >> в правиле @keyframes , которые обозначают 0%
+(начало) и 100%(завершение).
+
+Также можно использовать проуентное знаение. С помощью процентое
+значение можно добавить можно добавить столько изменений в стиль,
+сколько нужно.
+
+*/
+
+.percent {
+    height:100px;
+    width: 100px;
+    margin-top:10px;
+    background:black;
+    animation-name:percent;
+    animation-duration:0.5s;
+}
+
+@keyframes percent {
+    0%{background: red;}
+    50%{background: green;transform:translateX(100px)}
+    100%{background: blue;transform:translate(300px,50px);}
+}
+
+
+/* CSS animation-delay */
+/* 
+Свойтсво "animation-delay" указывает задержку перед началом 
+анимации.
+*/
+
+.delay {
+    width:100px;
+    height:100px;
+    margin-top: 10px;
+    background-color: black;
+    animation-duration:2s;
+    animation-name:delay;
+    animation-delay:5s
+}
+
+@keyframes delay {
+    0%{background: red}
+    50%{background: blue;transform:translateX(100px)}
+    100%{background:green;transform:translate(100px,400px)}
+}
+
+/* Допустимы и отрицательные значения. При использовании отрицательных 
+значений анимации так, как будто она уже длилась N секунд.
+*/
+
+.delay-minus {
+    width:100px;
+    height:100px;
+    margin-top: 10px;
+    background-color: black;
+    animation-duration:2s;
+    animation-name:delay-minus;
+    animation-delay:-2s
+}
+
+@keyframes delay-minus {
+    0%{background: red}
+    50%{background: blue;transform:translateX(100px)}
+    100%{background:green;transform:translate(100px,100px)}
+}
+
+/* Свойство CSS animation-iteration-count */
+/* 
+Свойство 'animation-iteration-count' указывает , сколько раз должна 
+заупститься анимация. 
+
+можеть задать число который он будет повторятся 
+или назавовем параметр infinite
+*/
+
+.iteration-count {
+    height:100px;
+    width: 100px;
+    background: black;
+    margin-top: 10px;
+    animation-name:interation-count;
+    animation-duration:2s;
+    animation-delay:3s;
+    animation-iteration-count:5
+}
+
+@keyframes interation-count {
+    0%{background: red;}
+    50%{background: blue;transform:translateX(100px)}
+    100%{background:green;transform:translate(100px,100px)}
+}
+
+
+.infinite {
+    height:100px;
+    width: 100px;
+    background: black;
+    margin-top: 10px;
+    animation-name:interation-count;
+    animation-duration:2s;
+    animation-delay:3s;
+    animation-iteration-count:infinite
+}
+
+@keyframes interation-count {
+    0%{background: red;}
+    50%{background: blue;transform:translateX(100px)}
+    100%{background:green;transform:translate(100px,100px)}
+}
+
+/* CSS анимация-свойтсво direction */
+/* 
+Свойство 'animation-direction' определяет, должна ли анимация воспроизводится
+в прямом , обратном или попеременном порядке. 
+
+Свойство animation-direction может принимать следующие значения.
+normal - анимация воспроизводится в обычном режиме (вперед).Это значение
+по умолчанию.
+
+reverse - анимация воспроизводится в обратном направлении (задом перед)
+alternate - сначала анимация воспроизводится в прямом , а затем в обратном
+порядке
+alternate-reverse - сначала анимация воспроизводится в обратном порядке,
+затем в прямом.
+*/
+
+/* reverse */
+.animation-direction {
+    height:100px;
+    width:100px;
+    background: black;
+    margin: auto;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-name: animation-direction;
+    animation-direction:reverse
+}
+
+@keyframes animation-direction {
+    0%{background: red;}
+    50%{background: blue;transform: translateX(100px);}
+    100%{background: green;transform:translate(100px,100px)}
+}
+
+/* alternate */
+.alternate {
+    height:100px;
+    width:100px;
+    background: black;
+    margin: auto;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: 2; /* alternate работает только при interation-count:2 */
+    animation-name: animation-direction;
+    animation-direction:alternate;
+}
+
+@keyframes alternate {
+    0%{background: red;}
+    50%{background: blue; transform:translateX(100px)}
+    100%{background: green;transform:translate(100px,100px)}
+}
+
+/* alternate-reverse */
+
+.alternate-reverse {
+    height:100px;
+    width:100px;
+    background: black;
+    margin: auto;
+    animation-duration:2s;
+    animation-name:alternate-reverses;
+    animation-delay: 3s;
+    animation-iteration-count:2;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes alternate-reverses {
+    0%{background: red;}
+    50%{background: blue;transform:translateX(100px)}
+    100%{background: green;transform: translate(100px,100px);}
+}
+
+
+
+/* CSS animation-timing-function */
+/* 
+Свойство 'animation-timing-function' определяет кривуб скорости анимации
+Свойство animation-timing-function может принимать следующие значения 
+
+ease — Задаёт анимацию с медленным началом, затем быстрым и медленным окончанием (по умолчанию)
+linear — Задаёт анимацию с одинаковой скоростью от начала до конца
+ease-in — Указывает на анимацию с медленным началом
+ease-out — Указывает на анимацию с замедленным завершением
+ease-in-out — Указывает на анимацию с медленным началом и окончанием
+cubic-bezier(n,n,n,n) — Позволяет задавать собственные значения в функции кубического сплайна
+*/
+
+/* ease */
+
+.ease {
+    height:100px;
+    width: 100px;
+    background: red;
+    animation-name: eases;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 3;
+    animation-direction: reverse;
+}
+
+@keyframes eases {
+    0%{background: black;}
+    50%{background: blue; transform: translateX(100px);}
+    100%{background: green; transform:translate(100px,100px)}
+}
+
+.ease-in {
+    height:100px;
+    width: 100px;
+    background: red;
+    animation-name: ease-ins;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+@keyframes ease-ins {
+    0%{background: black;}
+    50%{background: blue; transform: translateX(100px);}
+    100%{background: green; transform:translate(100px,100px)}
+}
+
+.ease-out {
+    height:100px;
+    width: 100px;
+    background: red;
+    animation-name: ease-outs;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 3;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes ease-outs {
+    0%{background: black;}
+    50%{background: blue; transform: translateX(100px);}
+    100%{background: green; transform:translate(100px,100px)}
+}
+
+.linear {
+    height:100px;
+    width: 100px;
+    background: red;
+    animation-name:linears;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+    animation-direction: normal;
+}
+
+@keyframes linears {
+    0%{background: black;}
+    50%{background: blue; transform: translateX(100px);}
+    100%{background: green; transform:translate(100px,100px)}
+}
+
+.cubic-razer {
+    height:100px;
+    width: 100px;
+    background: red;
+    animation-name:cubic-razer;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation-iteration-count: 3;
+    animation-direction: normal;
+}
+
+@keyframes cubic-razer {
+    0%{background: black;}
+    50%{background: blue; transform: translateX(100px);}
+    100%{background: green; transform:translate(100px,100px)}
+}
+
+
+
+/* Свойтсво CSS animation-fill-mode */
+/* 
+CSS-фнимация не влияет на элемент до воспроизведения первого ключевого кадра
+или после вопроизведения последнего ключегого кадра. Это поведение можно 
+изменить с помошью свойства animation-fill-mode.
+
+Свойство 'animation-fill-mode' определяет стиль целевого элемента, когда 
+анимация не воспроизводится (до начала , после окончания или в обоих 
+случаях.)
+
+Свойство animation-fill-mode может принимать следующие значения
+none - значение по умолчанию. Анимцация не применяет стили к элементу 
+до или после выполнения. 
+forwards - элемент созранит значения стиля , заданные в последнем 
+ключевом кадре (зависит от animation-direction и animation-iteration-count)
+backwards - элемент получит значения стиля , заданныпе в первом ключевом кадре
+(в зависимости от направления анимации) , и сохранит их в течение периода 
+задержки анимации.
+both - анимации будет следовать правилам как при движении впереж, так и при 
+движении назад, расширяя возможности анимации в обоих направлениях.
+*/
+
+.forwards {
+    height:100px;
+    width: 100px;
+    background: black;
+    animation-name:forward;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+}
+
+@keyframes forward {
+    0%{background: red;}
+    50%{background: green; transform: translateX(100px);}
+    100%{background: yellow;transform: translate(100px,100px);}
+}
+
+/* Сокращенное свойство CSS - анимации */
+/* 
+Также можно все элементы написать в одно свойство animation.
+*/
+
+.shorthand {
+    height:100px;
+    width: 100px;
+    background: black;
+    animation: brief 2s forwards ease-in 4 reverse ;
+}
+
+@keyframes brief {
+    0%{background: red;}
+    50%{background: green; transform: translateX(100px);}
+    100%{background: yellow;transform: translate(100px,100px);}
+}

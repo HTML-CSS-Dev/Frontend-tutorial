@@ -1,0 +1,160 @@
+/* CSS Псевдоклассы */
+/* 
+Псевдоклассы CSS - это ключевое слово , которое можно добавить к 
+селектору , чтобы задать стиль для элемента в определенном состоянии.
+*/
+
+/* Примеры использования псевдоклассов */
+
+/* 
+- Стилизовать элемент когда пользователь наводит на него курсор
+- по разному оформляьб посещенные и непосещенные ссылки 
+- стилизовать элемент когда он находится в фокусе
+- элементы формы: обязательные/ необязательные / входные / выходные
+- стилизуйте элемент , который является первым дочерним элементом 
+родительского. 
+*/
+
+/* Синтаксис */
+/* 
+Псевдоклассы всегда обозначается одним двоеточием (:) и названием 
+псевдокласса.
+*/
+
+/* 
+селектор: псевдокласс {
+свойств CSS
+*/
+
+/* Псевдоклассы , используемые в ссылках */
+/* Для HTML-ссылок обычных испольщуется следующие псевдоклассы:
+:link - стили непросмотренных ссылок --> не 
+:visited - стили посещенных ссылок 
+:hover - стили и ссылки при наведении курсора
+:active - стилизованная активная ссылка
+*/
+
+/* Примечание: a:hover должен прийти после a:link и a:visited
+в CSS чтобы быть эфективным. a:active прийдет после a:hover в CSS 
+чтобы быть эффективным
+*/
+
+a:link {
+    color:red
+}
+
+a:visited {
+    color:blue
+}
+
+a:hover {
+    color:green
+}
+
+a:active{
+    color:grey
+}
+
+/* hover: */
+
+div.hover {
+    background-color: red;
+    height:100px ;
+    width: 100px;
+}
+
+div.hover:hover {
+    background-color: blue;
+}
+
+div.hover:active {
+    background-color: tomato;
+}
+
+/* :focus этот псевдокласс нужна для стилизация поле ввода или 
+любого элемента которого можно нажать или для фокусированных 
+элементов */
+
+button {
+    background-color: red;
+    color:white;
+    border:1px solid red
+}
+
+button:focus {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+button:active {
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+}
+
+input[type="email"] {
+    width:100px
+}
+
+input[type="email"]:focus {
+    color:red;
+    padding-left:3px
+}
+
+
+/* Псевдоклассы и HTML-классы */
+
+/* 
+Псевдоклассы можно легко комбинировать с HTML-классами.
+*/
+
+div.division p:hover{
+    color:red
+}
+
+div.transparent {
+    background-color: red;
+    height:100px;
+    width: 100px;
+    border:1px solid red
+}
+
+div.transparent:hover {
+    background-color: transparent;
+}
+
+/* эелемнт детишек можно поставить после псевдокласса :hover */
+.element:hover p {
+    color:aqua
+}
+/* Псевдокласс CSS :first-child */
+/*
+Псевдокласс :first-child соответствует определенному элементу, 
+который является первым дочерним элементом другого элемента. 
+*/
+
+/* Все pre дети */
+pre:first-child {
+    color:red
+}
+
+/* все дети pre в родительском div */
+div pre:first-child{
+    color:blue
+}
+
+
+/* внутри первого детей pre дает стиль к внутренним p */
+pre:first-child p {
+    color:green
+}
+
+
+/* Псевдокласс CSS:lang */
+/* Псевдокласс :lang()  используется для выбора элементов с 
+атрибутом lang, имеющий указанное значение */
+
+q:lang(yes) {
+    quotes:"<" ">";
+}

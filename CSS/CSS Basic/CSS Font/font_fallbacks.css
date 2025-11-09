@@ -1,0 +1,32 @@
+/* CSS Резервные шрифты */
+/*Часто используемые резерыне шрифты*/
+/* 
+Ниже приведенные ниаболее часто используемые резервыне шрифты, сгруппированные 
+по 5 основным семейством шрифтов.  
+
+serif
+sans-serif
+monospace
+cursive
+fantasy
+*/
+
+.serif {
+    font-family: serif, sans-serif, monospace, cursive, fantasy;
+}
+
+.sans-serif {
+    font-family: sans-serif, serif, cursive, fantasy, monospace
+}
+
+.monospace {
+    font-family:monospace, sans-serif, serif , fantasy, cursive
+}
+
+.cursive {
+    font-family: cursive,sans-serif, serif, fantasy,monospace;
+}
+
+.fantasy {
+    font-family: fantasy, sans-serif, serif, cursive, monospace;
+}

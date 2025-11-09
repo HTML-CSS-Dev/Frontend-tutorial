@@ -1,0 +1,24 @@
+github push:
+git init
+git add --all /git add -A / git add filename
+touch README.md
+git -m -commit "message"
+git branch -M main/master
+git remote add origin main/master https:
+git push -u origin main/master
+git push - чтобы обновить изменения
+
+github force:
+git push --force - ессли не работает push
+
+github clone:
+https -> git clone https:url
+ssh: -> 
+
+github push to another reprository:
+
+git remote add origin  (https:)
+git pull origin main/master --allow-unrelated-histories
+git push origin main/master
+
+ 

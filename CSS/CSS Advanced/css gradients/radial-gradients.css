@@ -1,0 +1,86 @@
+/* Функция CSS radial-gradient() */
+/* 
+Функция CSS radial-gradient() создает радиальный градиент.
+
+Ралиальный градиент определяет переход цвета от уентрально1 точки 
+к краям.
+
+Радиальный градиент требует как минимум лвух цветовых переходов.
+Цветовые переходы - это цвета , между которыми вы хотите создать
+плавные переходы.  
+*/
+
+/* Синтаксис */
+/* 
+background-image: radial-gradient(shape size at position, start-color, ...,last-color);
+*/
+
+/* По умолчанию 'shape' имеет форму элипса size находится в
+самом дальнем углу , а 'position' - в центре.
+*/
+
+
+
+/* Радиальный градиент — равномерное распределение цветовых
+переходов (по умолчанию) */
+
+[class='default'] {
+    height:200px;
+    width:200px;
+    background-image: radial-gradient(red, yellow , green);
+}
+
+/* Радиальный градиент - цветовые переходы с разнвм интервалом */
+
+div.dif-interval{
+    height:200px;
+    width: 200px;
+    background-image: radial-gradient(red 1%, blue 99%);
+}
+
+
+
+/* Радиальный градиент - задать форму  */
+/* 
+Параметр 'shape' определяет форму градиента. Он может принимать 
+одно из следующих значений 
+
+- ellipse (это значение по умолчанию)
+- circle
+*/
+
+.circle{
+    height:200px ;
+    width: 200px;
+    background-image: radial-gradient( circle, red, blue);
+}
+
+/* Радиальный градиент - параметр размера */
+/* 
+Паоаметр 'size' определяет размер конечной формы. Он может 
+принимать одно из следующих значений. 
+
+closest-side
+farthest-side
+closest-corner
+farthest-corner (default)
+*/
+
+.size {
+    height:200px ;
+    width: 200px;
+    background-image: radial-gradient( circle closest-corner at 50%,  red , blue );
+}
+
+
+/* CSS repeating-radial-gradient */
+
+/* Функция CSS 'repeating-radial-gradient()' используется для 
+повторения  радиальных градиентов.
+*/
+
+.repeat {
+    height:200px ;
+    width: 200px;
+    background-image: repeating-radial-gradient(circle , red 10% , blue 20%);
+}

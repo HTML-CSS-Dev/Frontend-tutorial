@@ -1,0 +1,177 @@
+/* Адаптивный веб-дизайн - Медиазапросы */
+/* 
+Медиазапросы CSS позволяют применять стили в зависимости от характеристик 
+устройства или среды отображается веб-страница.
+
+Медиазапросы CSS необходимы для создания адаптивных веь-страниц.
+
+Правило CSS @media испотльзуется для добавления медиазапросов в таблицу
+стилей.
+
+*/
+
+/*Используйте медизапросы для добавления breakpoint */
+/* Breakpoints:
+
+320px - 640px - mobile - sm 
+641px - 767px - tablet - md 
+768px - 1023px - katta tablet va PC - lg
+1024px - 1179px - katta tablet va PC - xl
+1280px - 1535px - PC - 2xl
+
+
+Media query (CSS qoidalar)
+max-width, min-width, max-height, min-height, orientation, print...
+
+1. first-desktop (max-width, breakpoints decreasing)
+2. first-mobile (min-width, breakpoints increasing) */
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width:100%;
+    margin: auto;
+    border: 1px solid black;
+}
+
+p {
+    font-size: 32px;
+}
+
+@media (max-width:200px) {
+    .container {
+        width:100%;
+        background: red;
+    }
+
+    p {
+        font-size:10px;
+    }
+}
+
+/* Типичные тоски останова устройства */
+/* 
+СУществует множество экранов и устройств с разной высотой и шириной , 
+поэтому сложно создвть точную точку останова для каждого устройства. 
+Для простоты можно выделить пять групп:
+*/
+/* Очень маленькие устройства (телефоны , 600px и меньше) */
+@media only screen and (max-width:600px) {}
+
+/* малые устройства (планшеты в книжной ориентации и большие телефоны с
+разрешением 600px и выше.) */
+@media only screen and (min-width:600px) {}
+
+/* Средние устройства (планшеты в альбомной ориентации ,768px и выше) */
+@media only screen and (min-width:768px) {}
+
+/* Крупные устройства (ноутбуки/ настольные компьютеры , от 992px и выше) */
+@media only screen and (min-width:992px) {}
+
+
+/* Очень большие устройства (курпные нотбуки и настольные комптбтеры с 
+разрешением 1200px и выше) */
+@media only screen and (min-width:1200px) {}
+
+
+
+
+/* Медиазапросы для ориентации экрана */
+/* 
+Медизапросы также можно использовать для изменения макета страницы 
+в зависимоти от ориентации экрана.
+
+@media only screen and (orientation:landscape)
+*/
+
+.orientation{
+    border: 1px solid black;
+    max-width:1535px;
+    margin: auto;
+}
+
+@media only  screen and (orientation:landscape) {
+    .orientation {
+        background: blue;
+    }
+}
+
+/* Скрыть элементы с помощью медиазапросов */
+/* 
+Здесь мы используем медиазапросы , чтобы скрыть элеемнет на малентких 
+экранах.
+*/
+
+.hide {
+    height:100px;
+    width: 100px;
+    background: blue;
+}
+
+@media screen and (max-width:300px) {
+    .hide {
+        display: none;
+    }
+} 
+
+/* Изменение размера шрифта с помощью медиазапросов */
+/* 
+Здесь мы используем медиазапросы, чтобы изменить размер шрифта в 
+зависимоти от ширины области просмотра.
+*/
+
+.unit {
+    margin-top: 20px;
+    max-width: 1535px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.unit:first-child {
+    font-size: 18px;
+}
+
+@media screen and (max-width:400px) {
+    .unit:first-child {
+        font-size: 48px;
+    }
+}
+
+
+
+/* Медиазапросы для определения предаочтений пользователей */
+/* 
+Некоторы пользователи чувствительны к движению и предпочитают сайты с 
+меньшим количеством анимации.
+
+Функции 'prefers-reduced-motion' медиа позвляет проверить не попросил ли
+пользователь уменьшить уоличество движушихся элементов , таких как анимации
+или переходы.Используйте эту функцию , чтобы отключить анимацию и переходы 
+для пользователей, которые активировали эту нстройку на своем компьютере.  
+*/
+
+.animation {
+    height:100px;
+    width: 100px;
+    background: red;
+    animation-name: spin;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes spin {
+    from{
+        transform: translateX(100px);
+    }
+    to{transform: translateY(200px);}
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

@@ -1,0 +1,40 @@
+mkdir - создает файлы
+pwd - показывает путь файлов
+ls - показывает все файлы
+git rm filename - удалфет файлы
+clear- очишает поле ввода терминала
+code - открывает текстовый редактор
+
+работа с репрозиторием:
+
+git init - инициализирует файл
+ls -a - можно посмотреть скрытый фалй чтобы узнать инициолизировано ли файл
+
+git add filename - для добавления определенного файла
+git add --all / git add -A - чтобы добавить все фалйы
+
+git reset filename - чтобы вывести из ислежование 
+git rm -cached filename чтобы убрать от коммита (HEAD)
+git status - чтобы увидеть status нашего репрозитория (было ли изменено чтото в файлах)
+
+git commit -m "message" - чтобы добавить наш фалы к основной 
+git commit --amend -m 'message' - чтобы изменить коментарии коммита.
+git commit --amend -m - для ручного исправления через блокнот коммита.
+
+git log - для проверки коммита 
+
+touch README.md - для добавления README файла (внем будем писать что делает наш проект для клиентов для пролзователей)
+git branch -M main/master
+
+git remote add origin  https (ссылка нашего репрозитория ) - чтобы связатся с репрозиторием
+git remote remove origin - для удаления связи текущего репрозитория 
+git remote -v - для просмотра версии текущего репрозитория
+git push -u origin main/master - чтобы отправить в git reprository
+git push - чтобы обновить текущий репрозиторий 
+git push --force - чтобы обновить текущий репрозиторий когда комп выключается
+git pull origin main/master  --allow-unrelated-histories - используем перед push и она нужна если хотим добваить наши фалы к другому reprository
+
+git clone (ssh) - если reprository наша мы скопируем его
+git clone (https) - еси она чужая.
+
+

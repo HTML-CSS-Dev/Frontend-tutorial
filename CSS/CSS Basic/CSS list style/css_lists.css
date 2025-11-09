@@ -1,0 +1,149 @@
+/* CSS Списки */
+/* Списки стилей CSS */
+/* 
+В HTML есть два основынх типа списков:
+<ul> - упорядоченный списки (элементы списка обозначаются маркерами) 
+<ol> - упорядоченные спикси (элементы списка обозначаются цифрами 
+или буквами)
+*/
+
+/* В CSS есть следующте свойства для стилизации HTML-списков */
+/* 
+list-style-type - указывает тип маркера элемента списка
+list-style-image - указывает изображение в качестве маркера 
+элемента списка.  
+list-style-position- указывает положение маркерлв элемента списка 
+list-style- это shorthand для данных свойтсв.
+
+*/
+
+
+/* Маркеры элементов списка в CSS */
+/* 
+Свойство CSS 'list-style-type' определяет тип маркера элемента 
+списка.
+*/
+
+/* armenian */
+.armenian > li {
+    list-style-type:armenian
+}
+
+/* circle */
+
+.circle > li {
+    list-style-type:circle
+}
+
+.decimal > li {
+    list-style-type:decimal
+}
+
+.decimal-leading-zero {
+    list-style-type:decimal-leading-zero
+}
+
+.disc {
+    list-style-type:disc
+}
+
+.georgian {
+    list-style-type:georgian
+}
+
+.lower-alpha {
+    list-style-type:lower-alpha;
+}
+
+.lower-greek {
+    list-style-type:lower-greek
+}
+
+.lower-latin {
+    list-style-type:lower-latin
+}
+
+.lower-roman {
+    list-style-type:lower-roman;
+}
+
+.square {
+    list-style-type:square
+}
+
+/* Замнеа маркеар элемента списка в CSS на изображение */
+/* 
+Свойство CSS 'list-style-images' используется для замены маркера 
+элемента списка на изображение.
+
+Примечание: Всегда указывайте дополнительное свойство 
+'list-style-type'. Это свойтсов используется , если изображение по 
+какой-то причине недоступно.
+*/
+
+.image > li {
+    list-style-image:url(assets/svg/instagram_icon.svg);
+    list-style-type: square;
+}
+
+/* CSS: позиционирование саркеров элементов списка */
+/* 
+Свойство CSS 'list-style-position' опеделяет положение маркеров
+элементов списка (точек).
+
+'list-style-position:outside' Это означает , что маркеры будут 
+распологатся за пределами элемента списка. Начало каждой строки 
+элемента списка будет выравниватся по вертикали. Это занчение по 
+умолчанию. 
+
+'list-style-position:inside' это означает , что маркеры будут 
+находиться внутри элемента списка. Поскольку они являются частью
+элемнета списка, они будут частью теста и будут распологатся в 
+начале текста. 
+*/
+
+/* list-style-position:outside */
+.outside > li {
+    list-style-type:circle;
+    list-style-position: outside;
+    border: 1px solid black;   
+}
+
+
+/* list-style-position:inside */
+.inside > li {
+    list-style-type: square;
+    list-style-position:inside;
+    border:1px solid black
+}
+
+/* CSS: удаление саркеров элементов списка */
+/* 
+Свойство 'list-style-type:none' Используется для удаления маркеров 
+эдементов списка.
+
+Примечание: у списка есть поля и отступы по умолчанию.Чтобы убрать 
+их , добавбте 'margin:0' и 'padding:0' к элемнету <ul> или <ol>
+*/
+
+ol li {
+    list-style-type: none;
+}
+
+/* Сокращенное свойтсво CSS для стилей списков */
+/* 
+Свойство 'list-style' - это сокращенное свойство. Оно используется
+для установки всех свойств списка в одном обьявлении.
+
+При использовании сокращенного своства порядок значений свойств
+следующих:
+
+- list-style-type
+- list-style-image
+- list-style-position
+*/
+
+.list > li {
+    list-style: disc url(assets/svg/instagram_icon.svg) inside;
+    border: 1px solid black;
+}

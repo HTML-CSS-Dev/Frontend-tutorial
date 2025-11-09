@@ -1,0 +1,46 @@
+/* CSS 3D Transfomts */
+
+
+/* Свойство CSS 'transform' применяет к элементу 2D или 3D преобразование
+Это свойство позволяет поворачивать , масштабировать Ю перемешать и 
+наклонять  элементы.
+*/
+
+/* Функции 3D-преобразований в CSS */
+/* 
+C помощью свойств CSS 'transform' можно использовать следующие функции 3D
+преобразований.
+
+- rotateX()
+- rotateY()
+- rotateZ()
+*/
+
+.rotateX{
+    height:100px;
+    width: 100px;
+    background: red;
+    transform: rotateX(300deg);
+}
+
+
+
+/* Функция CSS rotateY() */
+/* Функция rotateY() поворачивает элемент вокруг оси Y на заданный */
+
+.rotateY {
+    height:100px ;
+    width: 100px;
+    background: red;
+    transform: rotateY(300deg);
+}
+
+/* Функция CSS rotateZ() */
+/* Функция rotateZ() поворачивает элемент вокруг оси Z на заданный угол */
+
+.rotateZ {
+    height:100px ;
+    width: 100px;
+    background: red;
+    transform:rotateZ(300deg);
+}

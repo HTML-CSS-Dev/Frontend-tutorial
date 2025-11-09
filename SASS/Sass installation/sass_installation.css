@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/*
+Чтобы пользоватся sass фалом наш css файл должен быть одинаковым как у sass файла.
+и должны скачать vscode 'live sass compileer'
+
+так как файл .scss браузер не подежтвает мы должны подключить css файл к html.
+*/
+p {
+  color: red;
+}/*# sourceMappingURL=sass_installation.css.map */

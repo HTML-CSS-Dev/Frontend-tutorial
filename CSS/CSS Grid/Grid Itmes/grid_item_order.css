@@ -1,0 +1,44 @@
+/* Свойство CSS 'order' можно использовать для определения 
+визуального порядка элемента сетки.
+
+Первый элемент сетки в исхожном HTML-коде не обязятельно должен 
+отображатся первым в контейнере сетки.
+*/
+
+.container {
+    display: grid;
+    width:200px;
+    height: 200px;
+    gap:10px;
+    grid-template-columns:repeat(3,1fr);
+    border: 1px solid black;
+}
+
+.cards1 {
+    border: 1px solid black;
+    order:6
+}
+
+.cards2 {
+    border: 1px solid black;
+    order:2
+}
+
+.cards3 {
+    border: 1px solid black;
+    order:4
+}
+
+.cards4 {
+    border: 1px solid black;
+    order:3
+}
+
+.cards5 {
+    border: 1px solid black;
+    order:5
+}   
+
+.cards6 {
+    border: 1px solid black;
+}

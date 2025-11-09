@@ -1,0 +1,170 @@
+/* CSS Дорожки сетки  */
+
+
+ /* Треки CSS Grid (строки и столбцы)  */
+
+/* Внутри контейнера сетки мы указываем количество м размер 
+столбцов и строк сетки.
+
+Для этого мы воспользуемся  следующими свойствами:
+
+- grid-template-columns - определяет количество и ширину 
+стольбцлв
+
+- grid-template-rows - определяет количество и высоту строк в
+в сетке.
+
+- grid-template-areas - определяет способ отображения столбцов 
+и строк с помощью именованных эдементов сетки.
+
+*/
+
+/* Свойство  CSS grid-template-columns */
+/* 
+Свлйство 'grid-template-columns' определяет количество и ширину 
+столбцов в сетке.
+
+Значение представляет собой , разделенный пробелами , где каждое
+значение определяет ширину соответстующего столбца.
+*/
+
+/* Единицы измерения являются */
+/* 
+    -длина в пикселях (100px 300px 200px)
+    -проценты (20% 60% 20%)
+    -единица измерения (1fr 2fr 1fr)
+    -auto (auto auto auto)
+    -repeat() (repeat(3, 1fr))
+    -minmax()(minmax(80px,1fr) 150px 150px)
+*/
+
+/* CSS grid-template-columns: auto */
+/* 
+Чтобы создать сетку из трех столбцов одинаковой ширины , 
+используйте ключевое слово <<auto>>.
+*/
+
+.container {
+    display: grid;
+    max-width:400px;
+    grid-template-columns:auto auto;
+    gap:10px;
+    border:1px solid black;
+    margin-bottom:10px;
+}
+.container .cards {
+    background: red;
+    height:50px;
+}
+
+/* Столбцы сетки со смешанной шириноц */
+/* 
+Чтобы создать сетку из трех столюцов : двух столбуов с 
+фиксированной шириной и одного столбца с размером <<auto>>
+выполните следующие дествия. 
+*/
+
+.mixed-container {
+    display: grid;
+    max-width: 400px;
+    grid-template-columns:100px auto;
+    gap:10px;
+    border:1px solid black;
+    margin-bottom: 10px;
+}
+
+.mixed-container > .cards {
+    background: red;
+    height:50px;
+}
+
+/* Примечание: если в сетке столбцов более трех элементов ,
+сетка автоматически добавит новые строки для размещения элементов. 
+*/
+
+/* Сетка из столбцов с единицей измерения 'fr' */
+/* 
+Единица измерения 'fr' означает дробь. Это эдиница измерения 
+автоматически делит доступное пространство на доли.
+
+1 fr хаймет 1.4 доступное пространство , а 2fr - 2/4 доступного 
+пространства.
+*/
+
+.fraction-container {
+    display: grid;
+    grid-template-columns:1fr 2fr;
+    gap:10px;
+    max-width:400px;
+    border: 1px solid black;
+}
+
+.fraction-container .cards {
+    background: red;
+    height: 50px;
+}
+
+
+/* Столбцы стки с фугкцией repeat() */
+/* 
+Функция 'repeat()' в CSS используется для повторения набора 
+столбцлв или строк в сетке.
+*/
+
+.repeat-container {
+    display: grid;
+    max-width: 400px;
+    border: 1px solid black;
+    gap:10px;
+    grid-template-columns:repeat(2, 1fr);
+}
+
+.repeat-container .cards {
+    background: red;
+    height:50px;
+}
+
+
+/* Столбцы сетки с функцией 'minmax()' */
+/* 
+Функция minmax() в CSS используется для определения диапазона
+ращмеровЮ который больше или равен минимальному значению или 
+равен максимальному значению.
+*/
+
+.minmax-container {
+    display: grid;
+    max-width:400px;
+    gap:10px;
+    border: 1px solid black;
+    grid-template-columns:minmax(100px, 2fr) 1fr
+}
+
+.minmax-container .cards {
+    background: red;
+    height: 50px;
+}
+
+/* Свойство CSS grid-template-rows */
+/* 
+Свойство 'grid-template-rows' определяет количетсво и высоту строк 
+в сетке.
+
+Значение представляет собой список , разделенных пробелами, где
+каждое значение определяет высоту соответствующий строки. 
+
+*/
+
+/* единицы измрения */
+
+/* 
+    Fixed lengths
+    Percentages
+    fr unit
+    auto
+    min-content
+    max-content
+    repeat()
+    minmax()
+    fit-content()
+*/

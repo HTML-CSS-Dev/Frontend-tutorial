@@ -1,0 +1,154 @@
+/* CSS Свойство overflow */
+/* 
+Свойство CSS overflow (переполнение)
+*/
+
+/* 
+Свойство CSS 'overflow' определяет , что происходит с контентом , который 
+слишком велик , чтобы помеситься в область.
+
+Этот параметр указывает , следует ли обрезать содержимое или добавить полосы 
+прокрутки , если содержимое элемента слищком велико.
+
+*/
+
+/* Свойство 'overflow' имеет следущие значение: */
+/* 
+- visible -' По умолчанию.Переполнеие не обрезается.Содержимое отображается
+за пределами элемента.
+- hidden - Переполнение обрезается , а оставшееся содержимое скрывается
+- scroll - Добавлены полосы прокрутки . Чтобы увидеть весь контент, 
+пользователю нужно прокрутить страницу.
+- auto - Похожа на 'scroll' , но добавляет полосы прокрутки только при 
+необхожимости.
+*/
+
+/* Переполнение CSS:видимое */
+/* 
+По умолчанию переполнение имеет значение 'visible' , то есть не обрезается 
+и отображается за пределами элемента.
+*/
+
+.overflow-visible {
+    height:100px;
+    width:100px;
+    overflow: visible;
+    border: 1px solid black;
+    margin-bottom: 50px;
+}
+
+/* Переполнение CSS: скрыто */
+/* 
+При использовааннии значение 'hidden' переполнение ообрезается , а оставшееся 
+содердимое скрывается.
+*/
+
+.overflow-hidden {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+
+/* CSS overflow: прокрутка */
+/* 
+При использовании значения 'scroll' всегда добавляются горизонтальная и 
+вертикальная полосы прокрутки. Чтобы весь контент , пользователю нужно
+прокрутить страницу. 
+*/
+
+.overflow-scroll {
+    height:100px;
+    width: 100px;
+    border: 1px solid black;
+    overflow: scroll;
+}
+
+
+
+/* Переполнение CSS: автоматическое */
+/* 
+Значение 'auto' похоже на 'scroll' , но полосы прокрутки добавляются 
+необходимости:
+*/
+
+.overflow-auto {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+/* CSS: ocerflow-x и overflow-y */
+/* 
+Свойства 'overflow-x' и 'overflow-y' определяет , нужно ли изменить 
+переполнение содержимого только по горизонтали или по вертикали (или по 
+параметрам):
+
+- overflow-x - указывает , что делать с левыми и правыми краям содержимого
+- overflow-y - указывает , что делать с верхним и нижним краями содержимого
+*/
+
+
+/* overflow-x */
+.overflow-x-visible {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+    overflow-x:visible;
+}
+
+.overflow-x-hidden {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+    overflow-x: hidden;
+}
+
+.overflow-x-scroll {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+    overflow-x:scroll;
+    overflow-y:hidden;
+}
+
+.overflow-x-auto {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+    overflow-x:auto;
+    overflow-y:scroll;
+}
+
+
+/* overflow-y */
+
+.overflow-y-visible {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+    overflow-y: visible;
+}
+
+.overflow-y-hidden {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.overflow-y-scroll {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+    overflow:scroll;
+}
+
+.overflow-y-auto {
+    height:100px;
+    width:100px;
+    border: 1px solid black;
+    overflow-y:auto;
+}

@@ -1,0 +1,220 @@
+/* CSS Переходы */
+
+/* 
+CSS - переходы позволяют плавно изменить значение свойств в течение 
+заданного периода времени.
+*/
+
+/* Свойство CSS transition (переход) */
+/* 
+Чтобы создать эффект перехода, необхожимо указать свойств CSS,
+для которого нужно добавить переход и его продолжительность.
+*/
+
+/* 
+Свойство CSS 'transition' является сокращенным обозначением дял.
+
+- transition-property (Обязательно)
+- transition-duration (Обязятельно)
+- transition-timing-function
+- transition-delay
+*/
+
+/* Как запустить переход */
+/* 
+Переход запускается при изменении свойств элемента. Это часто 
+происходит в псевдоклассах (:hover, :active, :focus, или :checked)
+
+Таким образом, согласно приведённому выше коду, эффект перехода 
+начнётся, когда изменится значение свойства width.
+
+Теперь мы добавляем класс div:hover, который задает новое значение
+для свойства width при наведении курсора мыши на элемент <div>:
+*/
+
+.animation {
+    height:100px;
+    width:100px;
+    background:linear-gradient(90deg,red,blue);
+}
+
+.animation:hover {
+    transition-duration:1s;
+    transition-property:width;
+    width: 450px;
+    height: 300px;
+}
+
+
+/* Обратите внимание , что когда курсор мыши выходит за
+пределы элемента , он постепенно возвращает к своему исходному 
+стилю
+*/
+
+/* Изменение нескольких значений свойств */
+/* 
+Вы можете изменить несколько свойств , разделив их запятыми.
+*/
+
+.all-in-one {
+    height:100px;
+    width: 100px;
+    border-radius:100%;
+    background-image:repeating-radial-gradient(ellipse,red 30%,blue 50%,green 10%);
+}
+
+.all-in-one:hover {
+    transition:height 3s, width 4s;
+    height:200px;
+    width:200px;
+}
+
+/* Cкорости перехода CSS */
+/* Свойство 'transition-timing-function' опеределяет скорости 
+эффекта перехода.
+Это свойство может иметь одно  из следующих значений:
+
+- ease - переход будет начинаться медленно , затем ускорится и снова
+замедлится (это знаение по умолчнаию)
+-linear - переход будет осуществлятся с одинаковой скоростью от
+начала до конца 
+-ease-in - переход начнется медленно
+-ease-out - переход завершится медленно
+-ease-in-out - переход будет плавным как в начале , так и в конце. 
+-cubic-bezier(n,n,n,n) - позволяет задавть собственные значения 
+в функции кубического сплайна
+*/
+
+/* Transition + Transform */
+
+/* ease */
+
+.ease {
+    height:100px;
+    width:100px;
+    border-radius: 100%;
+    background: conic-gradient(red 0deg, red 120deg, blue 120deg,blue 240deg,green 240deg, green 360deg);
+}
+
+.ease:hover {
+    transform: translateX(200px);
+    transition-timing-function: ease;
+    transition-duration:2s;
+}
+
+/* linear */
+.linear {
+    height:100px;
+    width:100px;
+    border-radius: 100%;
+    background: conic-gradient(red 0deg, red 120deg, blue 120deg,blue 240deg,green 240deg, green 360deg);
+}
+
+.linear:hover {
+    transition-timing-function:linear;
+    transform:translateX(200px);
+    transition-duration:2s
+}
+
+
+/* ease-in */
+.ease-in {
+    height:100px;
+    width:100px;
+    border-radius: 100%;
+    background: conic-gradient(red 0deg, red 120deg, blue 120deg,blue 240deg,green 240deg, green 360deg);
+}
+
+.ease-in:hover {
+    transition-duration: 2s;
+    transition-timing-function:ease-in;
+    transform:translateX(200px)
+}
+
+
+/* ease-out */
+
+.ease-out {
+    height:100px;
+    width:100px;
+    border-radius: 100%;
+    background: conic-gradient(red 0deg, red 120deg, blue 120deg,blue 240deg,green 240deg, green 360deg);
+}
+.ease-out:hover {
+    transform: translateX(200px);
+    transition-duration:2s;
+    transition-timing-function:ease-out
+} 
+
+
+
+/* ease-in-out */
+.ease-in-out {
+    height:100px;
+    width:100px;
+    border-radius: 100%;
+    background: conic-gradient(red 0deg, red 120deg, blue 120deg,blue 240deg,green 240deg, green 360deg);
+}
+
+.ease-in-out:hover {
+    transition-timing-function:ease-in-out;
+    transform:translateX(200px);
+    transition-duration:3s
+}
+
+
+/* cubic-bazier */
+
+.cubic-bazier {
+    height:100px;
+    width:100px;
+    border-radius: 100%;
+    background: conic-gradient(red 0deg, red 120deg, blue 120deg,blue 240deg,green 240deg, green 360deg);
+}
+
+.cubic-bazier:hover{
+    transition-duration:4s;
+    transition-timing-function:cubic-bezier(0.77, 0, 0.175, 1);
+    transform:translateX(200px)
+}
+
+
+/* CSS Transition Delay */
+
+/* 
+Свойство 'transition-delay' указывает на задержку перед началом 
+перехода.
+
+Значение 'transition-delay' указывает в секундах или миллисекундах
+(мс).
+*/
+
+.transition-delay {
+    height:100px;
+    width:100px;
+    border-radius: 100%;
+    background: conic-gradient(red 0deg, red 120deg, blue 120deg,blue 240deg,green 240deg, green 360deg);
+}
+
+.transition-delay:hover {
+    transition-delay:5s;
+    transition-duration: 2s;
+    transition-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1);
+    transform:translateX(200px)
+}
+
+
+/* Сокращенное свойство 'transiton' */
+
+.transition {
+    height:100px;
+    width:100px;
+    border-radius: 100%;
+    background: conic-gradient(red 0deg, red 120deg, blue 120deg,blue 240deg,green 240deg, green 360deg);
+}
+
+.transition:hover {
+    transition: 2s linear;
+    transform:translateX(200px);
+    transition-delay: 3s;
+}

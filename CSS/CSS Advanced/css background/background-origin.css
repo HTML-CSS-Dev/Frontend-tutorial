@@ -1,0 +1,33 @@
+/* CSS Background Origin */
+/* CSS background-исходное свойство */
+/* 
+Свойство CSS 'background-origin' определяет, где будет расположено 
+фоновое изображение.
+
+Это свойство может иметь один из следующих значений.
+
+- padding-box - фоновое изображение начинается с верхнего левого 
+угла отступа. Это значение по умолчнаию. 
+
+- border-box - Фоновое изображение начинается с верхнего левого 
+угла границы.
+
+- content-box - Фоновое изображение начинается с верхнего левого
+угла содержимого.
+
+Прмчечание: Это свойство не действует , если для 
+'background-attachment' свойства установлено значение 'fixed'
+*/
+
+/* padding-box */
+
+#div1 {
+    background-image: url(https://media1.tenor.com/images/4e3ed33c955f416f99bcabf56f701062/tenor.gif);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:200px;
+    width:200px;
+    background-origin:content-box;
+    font-size: 10px;
+    color:white;
+}

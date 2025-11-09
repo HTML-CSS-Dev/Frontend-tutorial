@@ -1,0 +1,53 @@
+/* Сокращенное свойство CSS дял шрифтов */
+/* 
+Чтобы сократить код можно указать все отдельные свойтсва в 
+одном обьявлении.
+
+Свойтсво CSS font - это сокращенная запись для
+
+font-style 
+font-varinat
+font-weight
+font-stretch
+font-size
+line-height
+font-family
+*/
+
+
+
+/* Правила для свойства CSS Font Shorthand */
+/* 
+1. Значение font-size И font-family являются обязательными.
+Есди одно из других значений отсутствует , используется значение 
+по умолчанию.
+
+2. Если опредлено , font-style , font-variant И font-weight 
+должны предшествовать font-size.
+
+3. Если определено line-height должно следовать сразц за 
+font-size , перед которым стоит "/" . напрмер 15px/30px
+
+4. font-family должно быть указано последним 
+
+*/
+
+/* font-style font-variant font-weight font-size/line-height 
+font-family
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+
+.shorthand{
+    font-size: 20px;
+    font-variant:small-caps;
+    font-weight:700;
+    font-style:oblique;
+    line-height:30px;
+    font-family:'Sofia',sans-serif;
+}
+
+.full {
+    font:oblique small-caps 700 20px/30px "Sofia";
+}
+

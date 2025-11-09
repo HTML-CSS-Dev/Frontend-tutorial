@@ -1,0 +1,88 @@
+/* CSS Ссылки */
+/* Ссылки для оформления CSS */
+/* 
+HTML- ссылки можно стилизовать с помощью множетсва свойств CSS,
+таких как 
+color, text-decoration, background-color, font-size , font-weight,
+font-family, и т.д.)
+*/
+
+/* Оформление ссылок в зависимости от штата */
+/* 
+Кроме того ссылки могут отображатся по-разному в зависимости от того 
+, в каком состоянии они находятся.
+*/
+
+/* Существует четыре состоянии связи: */
+/* 
+:link - обычная непосещенная ссылка
+:visited - ссылка , которую посетил пользователь
+:hover - ссылка, на которую пользователь наводит курсор
+:active - ссылка , по которой нужно кликнуть
+*/
+
+/* При настройке стиля для состояний ссылок необходимо соблюдать 
+некоторые правила: */
+
+/* 
+:hover должен идти после :link и :visited
+:active должени стоять после :hover
+*/
+
+a[title~="pseudo"] {
+    font-size: 20px;
+}
+
+a[title~="pseudo"]:link{
+    color:green;
+}
+
+a[title~="pseudo"]:visited {
+    color:red
+}
+
+a[title~="pseudo"]:hover {
+    color:green
+}
+
+a[title~="pseudo"]:active {
+    color: dodgerblue;
+}
+
+
+/* CSS Ссылки -text-decoration */
+/* 
+Свойство 'text-decoration' часто импользуется для удаления 
+нижней линииот текста.
+*/
+
+a[title ='text-decoration'] {
+    /* text-decoration:line-through wavy 1px red; */
+    text-decoration: none;
+    color:black
+}
+
+/* CSS ссылки - background-color */
+/* Свойство 'background-color' задает цвет заднего йона для ссылки */
+
+a[title="background-color"] {
+    text-decoration: 0.1px wavy red line-through; 
+    color:#ffffff;
+    background-color: black;  
+}
+
+/* CSS ссылка кнопки */
+/*CSS может созлать html линковые кнопки*/
+
+a[title='button'] {
+    border: 1px solid currentColor;
+    background:black;
+    color:white;
+    text-decoration: none; 
+    padding:5px;
+}
+
+a[title='button']:hover {
+    background: white;
+    color:black
+}

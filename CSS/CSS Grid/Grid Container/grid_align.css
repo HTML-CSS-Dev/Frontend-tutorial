@@ -1,0 +1,300 @@
+/* CSS Контейнер сетки - выравнивание сожержимого сетки */
+
+/* Внутри контейнера сетки можно задать выравнивание содержимого 
+сетки с помощью следующих всойств:
+*/
+
+/* 
+   -justify-content -выравнивает содержимое сетки , если оно не занимает 
+все доступное пространтсво по основной оси (по горизонтали) 
+   -align-content - выравнивает сожержимое сетки , если оно не занимает 
+все доступное пространство по поперечной оси (вертикали).
+   -place-content - сокращенное свойство для 'align-content' и 
+'justify-content'.
+*/
+
+/* Свойство CSS justify-content */
+/* 
+Свойство 'justify-content' используется для выравниявания содержимого 
+сетки оно не занимает все доступное пространство по основной оси 
+(по горизонтали).
+
+*/
+
+/* Это свойство может иметь одно из следующих значений: */
+/* 
+-space-evently
+-space-around
+-space-between
+-center
+-start
+-end
+*/
+
+/* 
+Примечание: Общая ширина содердимого сетки должна быть меньше ширины 
+контейнера , чтобы "justify-content" свйоство сработало.
+*/
+
+/* justify-content:space-between -> поставялет свободное мсто между 
+несколькими конетентами чтобы они все тронулись к краям сетки.  */
+
+.space-between {
+    width:200px;
+    display: grid;
+    grid-template-columns:repeat(2, 50px);
+    row-gap:10px;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.space-between > .cards {
+    background: red;
+    height: 50px;
+}
+
+/* justify-content:space-around -> дает место и меду блокаим и после них
+*/
+
+.space-around {
+    width:200px;
+    display: grid;
+    grid-template-columns:repeat(2, 50px);
+    justify-content: space-around;
+    row-gap: 10PX;
+    border: 1px solid black;
+}
+
+.space-around > .cards {
+    background: red;
+    height: 50px;
+}
+
+/* justify-content:space-evently -> дает малое растояние между элементами 
+но кнцови не дотрагиваются к стенкам */
+.space-evently {
+    width:200px;
+    display: grid;
+    grid-template-columns:repeat(2, 50px);
+    justify-content: space-evenly;
+    row-gap: 10PX;
+    border: 1px solid black;
+}
+
+.space-evently > .cards {
+    background: red;
+    height: 50px;
+}
+
+/* justify-content:center -> центрирует элементы по оси горизонтали */
+
+.center {
+    width:200px;
+    display: grid;
+    grid-template-columns:repeat(2, 50px);
+    justify-content: center;
+    gap: 10PX;
+    border: 1px solid black;
+}
+
+.center > .cards {
+    background: red;
+    height: 50px; 
+}
+
+
+/* justify-content:start -> это значение по умолчанию. она будет стоять  
+в начале по горизонтаи
+*/
+.start {
+    width:200px;
+    display: grid;
+    grid-template-columns:repeat(2, 50px);
+    justify-content:start;
+    gap: 10PX;
+    border: 1px solid black;
+}
+
+.start > .cards {
+    background: red;
+    height: 50px 
+}
+
+/* justify-content:end -> наш элементы будут стоять в конце блока по 
+оси горизонтали.
+*/
+
+.end {
+    width:200px;
+    display: grid;
+    grid-template-columns:repeat(2, 50px);
+    justify-content:end;
+    gap: 10PX;
+    border: 1px solid black;
+}
+
+.end > .cards {
+    background: red;
+    height: 50px 
+}
+
+
+/* Свойство CSS align-content */
+/* 
+Свойство 'align-content' используется для выравнивания содержимого 
+сетки, если оно не занимает все доступное пространство по поперечной 
+оси (вертикали).
+
+Это свойство можеть иметь из следующий значений:
+ -space-evently
+ -space-between
+ -space-around
+ -start
+ -end
+ -center
+*/
+
+/* Примечание: чтобы свойство 'align-content' работало,
+общая высота содержимого сетки должна быть меньше высоты контейнера */
+
+/* align-content:space-between -> поставялет свободное мсто между 
+несколькими конетентами чтобы они все тронулись к краям сетки. по 
+вертикали */
+
+
+#space-between {
+    width:200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns:repeat(2, 50px);
+    align-content:space-between;
+    column-gap: 10px;
+    border: 1px solid black;
+}
+
+#space-between > .cards {
+    background: red;
+    height: 50px 
+}
+
+/* align-content:space-around -> дает место и меду блокаим и после них
+(пл вертикали ) */
+
+#space-around {
+    width:200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns:repeat(2, 50px);
+    align-content:space-around;
+    column-gap:10px;
+    border: 1px solid black;
+}
+
+#space-around > .cards {
+    background: red;
+    height: 50px 
+}
+
+/* align-content:space-evenly -> дает малое растояние между элементами 
+но кjнцови не дотрагиваются к стенкам  (по вертикали)*/
+#space-evently {
+    width:200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns:repeat(2, 50px);
+    align-content:space-evenly;
+    column-gap:10px;
+    border: 1px solid black;
+}
+
+#space-evently > .cards {
+    background: red;
+    height: 50px
+}
+
+/* align-content:center -> центрирует элементы по оси вертикали */
+#center {
+    width:200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns:repeat(2, 50px);
+    align-content:center;
+    gap:10px;
+    border: 1px solid black
+}
+
+#center > .cards {
+    background: red;
+    height: 50px
+}
+
+/* align-content:start -> это значение по умолчанию. она будет стоять  
+на верху по вертикали
+*/
+#start {
+    width:200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns:repeat(2, 50px);
+    align-content:start;
+    gap:10px;
+    border: 1px solid black
+}
+
+#start > .cards {
+    background: red;
+    height: 50px
+}
+
+/* align-content:end -> наш элементы будут стоять ввнизу блока по 
+оси вертикали.
+*/
+
+#end {
+    width:200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns:repeat(2, 50px);
+    align-content:end;
+    gap:10px;
+    border: 1px solid black
+}
+
+#end > .cards {
+    background: red;
+    height: 50px
+}
+
+/* Свойство CSS place-content */
+/* 
+Свойство 'place-content' является сокрашенным вариантом свойств 
+'align-content' и 'justify-content'.
+*/
+
+/* 
+Если 'place-content' имеет два значения:
+place-content:start center - justify-content:start , align-content:center
+
+Если 'align-content' имеет одно значение:
+place-content:center - то этот значение работает для обеих 
+*/
+
+/* Примечание: общая высота и ширина элемента сетки должны быть 
+меньше высоты и ширины контейнера , чтобы свойство 'place-content'
+работало.
+*/
+
+.place-content {
+    height:200px;
+    width: 200px;
+    display: grid;
+    place-content: center end;
+    gap:10px;
+    grid-template-columns: repeat(2, 50px);
+    border: 1px solid black;
+}
+
+.place-content > .cards {
+    height: 50px;
+    background: red;
+}

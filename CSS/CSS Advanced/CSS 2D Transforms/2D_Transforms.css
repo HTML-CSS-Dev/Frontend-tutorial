@@ -1,0 +1,219 @@
+/* CSS 2D Трансформация */
+/* 
+Свойство CSS 'transform'  применяет к элементу 2D или 3D трансформацию.Это 
+свойство позволяеь поворачивать, масштабировать , перемешать и наклонять 
+элементы.
+*/
+
+
+/* Функции 2D - трансформации CSS */
+/* 
+С помошью свойства css 'transform' можно использовать следующие 
+функции двумерного трансформации.
+*/
+
+/* 
+translate()
+rotate()
+scaleX()
+scaleY()
+scale()
+skewX()
+skewY()
+skew()
+matrix()
+*/
+
+
+/* Функция CSS translate() */
+/* 
+Функция 'translate()' перемещает элемент из его текущего положения
+(в соответсвии с параметрами , заданными для осей X и Y ).
+
+transform:translate(x,y) по оси x и y
+*/
+
+.translate {
+    height:200px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.transform-translate {
+    height:100px;
+    width:100px;
+    background: red;
+    transform: translate(100px,100px);
+}
+
+
+/* Функция CSS rotate() */
+/* 
+Функция ' rotate() ' поворачивает элемент по часовой стрелке или
+против часовой стрелке на заданный угол.
+
+transform:rotate(+-deg)
+*/
+
+.rotate {
+    height: 300px;;
+    width: 300px;;
+    border: 1px solid black;
+}
+
+.transform-rotate { 
+    height:100px;
+    width: 100px;
+    color: white;
+    background: linear-gradient(to right, red 50%, blue 50%);
+    transform:rotate(30deg);
+    margin-bottom: 40px;
+}
+
+/* При сипользовании отрицательных значений элемент будет поворачиваться 
+против часовой стрелки. */
+
+.transform-rotate-unticlock {
+    height:100px;
+    width: 100px;
+    color: white;
+    background: linear-gradient(to right, red 50%, blue 50%);
+    transform:rotate(-30deg);
+}
+
+/* Функция CSS scale() */
+
+/* 
+Функция sclae() увеличивает или уменшает размер элемента (в соответсвии
+с заданными параметрами ширины и высоты).
+
+*/
+
+.scale {
+    height:200px;
+    width:200px;
+    border: 1px solid black;
+}
+
+.transform-scale {
+    height:100px;
+    width: 100px;
+    background-color: red;
+    transform:scale(0.5, 1)
+}
+
+
+
+/* Фцнуция CSS scaleX() */
+/* функция scaleX() увеличивает или уменшает ширину элемента */
+
+.scaleX {
+    height:200px; 
+    width:200px;
+    border: 1px solid black;
+}
+.transform-scaleX{
+    height: 100px;
+    width: 100px;
+    transform:scaleX(2);
+    background-color: red;
+}
+
+
+
+
+/* Функция scaleY() */
+/* Функция scaleY() увелияивает или уменшает высоту элемента */
+
+.scaleY{
+    height:200px ;
+    width:200px;
+    border: 1px solid black;
+}
+
+.transform-scaleY {
+    width:100px;
+    height:100px;
+    transform:scaleY(1.5);
+    background: red;
+}
+
+
+
+/* Фцнкция CSS skewX() */
+/* Фунуция skewX() повораяивает элемент по сои X на заданный угол */
+
+.skewX{
+    height:200px ;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.transform-skewX{
+    height:100px ;
+    width: 100px;
+    background: conic-gradient(red 0deg, red 90deg, blue 90deg, blue 180deg, green 180deg , green 270deg, yellow 270deg);
+    transform:skewX(320deg)
+}
+
+.skewY {
+    height:200px;
+    width:200px;
+    border: 1px solid black;
+}
+
+.transform-skewY{
+    height:100px;
+    width:100px;
+    background: conic-gradient(red 0deg, red 90deg, blue 90deg, blue 180deg, green 180deg , green 270deg, yellow 270deg);
+    transform:skewY(320deg);
+}
+
+
+/* Функция CSS skew() */
+/* 
+Функция skew() поворачивает элемент по осям X и Y на заданные углы.
+*/
+
+.skew {
+    height:200px ;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.transform-skew{
+    height:100px;
+    width:100px;
+    background:conic-gradient(red 0deg, red 90deg, blue 90deg, blue 180deg, green 180deg , green 270deg, yellow 270deg);
+    transform:skew(320deg, 320deg);
+}
+
+
+/* Функция CSS matrix() */
+/* Функция 'matrix()' обьединяет все функции двумерного преобразования
+в одну.
+
+Функция matrix() принимает шесть параметорв , содержащих математические 
+функции , которые позволяют поворачивать , масштабировать , перемещать
+(транслировать) и наклонять элементы.
+*/
+
+/* Параметры следующие: matrix(scaleX(),skewY(),skewX(),scaleY(),
+translateX(), translateY()*/
+
+.transform-all {
+    margin-top: 10px;
+    margin-bottom: 200px;
+    height:100px;
+    width:100px;
+    background:red;
+    transform:translate(50px, 30px) rotate(30deg) scale(1,2) skew(20deg,40deg);
+}
+
+.matrix {
+    height:100px;
+    width:100px;
+    background:red;
+    transform: matrix(1,0.4,0.2,2,50,30);
+}
+
