@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/*
+Sass позволяет вкладывать CSS-селекторы так же , как и HTML.
+*/
+nav {
+  border: 1px solid black;
+}
+nav ul {
+  border: 1px solid black;
+}
+nav li {
+  color: red;
+}
+
+/* Обратите внимаение , что в Sass селекторы ul, li вложены в
+селектор nav
+
+В то время как в CSS правила определяются одно за другим
+(без вложенности)
+*/
+/*
+nav {
+    border:1px solid black
+}
+
+nav ul {
+    border: 1px solid black;
+}
+
+nav li {
+    color:red;
+    list-style: none;
+}
+
+*/
+/*
+Многие свойства CSS имеют одинаковый префикс , например 
+'font-family' , 'font-size' , text-align , 'text-decoration'
+*/
+p {
+  background-color: red;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+}/*# sourceMappingURL=nesting.css.map */

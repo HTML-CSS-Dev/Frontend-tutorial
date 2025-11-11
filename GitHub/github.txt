@@ -5,7 +5,7 @@ touch README.md
 git -m -commit "message"
 git branch -M main/master
 git remote add origin main/master https:
-git push -u origin main/master
+git push origin main/master
 git push - чтобы обновить изменения
 
 github force:

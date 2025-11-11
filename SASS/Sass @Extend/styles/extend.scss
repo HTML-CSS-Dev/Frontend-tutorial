@@ -1,0 +1,35 @@
+// Sass @extend директива
+
+/*
+Директива @extend позволяет использовать набор свойств CSS для одного селектора 
+в другом.
+
+Директора @extend полезна , если у вас есть элементы с почти идентичным стилем ,
+которые отличаются лищь небольшими деталями.
+*/
+
+@mixin border($width:1px,$type:solid,$color:white) {
+    border:$width $type $color 
+}
+
+.left-btn {
+    background: red;
+    color:white;
+    font-size: 10px;
+    @include border($color:black)
+}
+
+.center-btn {
+    @include border;
+    @extend .left-btn;
+}
+
+.right-btn {
+    @extend .left-btn;
+    @include border($color:green)
+}
+
+
+/* При использовании @extend директивы вам не нужно указывать 
+несколько классов для элемента в HTML-коде.
+*/

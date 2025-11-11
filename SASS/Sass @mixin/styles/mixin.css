@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/*
+Директива @mixin позволяет создавать CSS-код , который можно повторно 
+использовать на сайте.
+
+Директива @include создана для того , чтобы мы могли использовать (включать) миксин.
+*/
+/* @mixin mixin_name {
+    свойство:значение;
+    свойство:значение;    
+}
+
+*/
+/*
+Совет: совет по использование дефисов и подчеркиваний в Sass:дефисы и подчеркивания 
+считаются одним и тем же. Это значит , что @mixin all_colors{} и @mixin all-colors{}
+считаются одним и тем же миксином!
+*/
+/*
+селектор {
+@include mixin_name;
+}
+*/
+p {
+  color: red;
+  background: green;
+  border: 2px solid currentColor;
+}
+
+.selector {
+  color: red;
+  background: green;
+  border: 2px solid currentColor;
+  text-align: center;
+  -webkit-text-decoration: 3px dashed underline white;
+          text-decoration: 3px dashed underline white;
+}
+
+b {
+  border: 2px solid red;
+}
+
+i {
+  border: 2px dotted red;
+}
+
+em {
+  border: red 2px dashed;
+}
+
+/* А если хотим поменять параметр то береи один из параметров переменных и его 
+изменим */
+em {
+  border: red 2px solid;
+}/*# sourceMappingURL=mixin.css.map */

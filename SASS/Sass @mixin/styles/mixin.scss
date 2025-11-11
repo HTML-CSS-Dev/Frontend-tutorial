@@ -1,0 +1,113 @@
+// Sass @mixin и @include
+
+// Миксины Sass
+/*
+Директива @mixin позволяет создавать CSS-код , который можно повторно 
+использовать на сайте.
+
+Директива @include создана для того , чтобы мы могли использовать (включать) миксин.
+*/
+
+// Определение миксина
+// Миксин определяется с помощью @mixin директивы.
+
+// Синтаксис @mixin
+/* @mixin mixin_name {
+    свойство:значение;
+    свойство:значение;    
+}
+
+*/
+
+@mixin all_colors {
+    color:red;
+    background: green;
+    border:2px solid currentColor;
+}
+
+/*
+Совет: совет по использование дефисов и подчеркиваний в Sass:дефисы и подчеркивания 
+считаются одним и тем же. Это значит , что @mixin all_colors{} и @mixin all-colors{}
+считаются одним и тем же миксином!
+*/
+
+// Использование @include
+// Директива @include используется для включения миксина.
+
+// Синтаксис 
+/*
+селектор {
+@include mixin_name;
+}
+*/
+
+p {
+    @include all-colors;
+}
+
+
+// Миксин может включать в себя другие миксины
+@mixin text {
+    text-align: center;
+    text-decoration: 3px dashed underline white;
+}
+
+
+@mixin all {
+    @include all-colors;
+    @include text
+}
+
+.selector {
+    @include all
+}
+
+
+
+
+// Передача переменных в миксин
+// Миксины принимают аргументы. Таким образом можно передавать переменные в миксин.
+
+// 1-й способ
+
+$color:red;
+$width:2px;
+$style:solid;
+
+@mixin bordered {
+    border:$width $style $color;
+}
+
+b {
+@include bordered;
+}
+
+// 2-й способ
+
+@mixin borders($mycolor,$mywidth,$mystyle) {
+    border:$mywidth $mystyle $mycolor
+}
+
+i {
+    @include borders(red,2px,dotted)
+}
+
+// 3-й способ 
+
+// Значение по умолчанию для миксина 
+// Также можно задать по умолчанию для переменных миксина
+
+@mixin border($color:red, $width:2px, $style:dashed) {
+    border:$color $width $style
+}
+
+em {
+    @include border
+}
+
+/* А если хотим поменять параметр то береи один из параметров переменных и его 
+изменим */
+
+em {
+    @include border($style:solid)
+}

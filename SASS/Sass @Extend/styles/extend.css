@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/*
+Директива @extend позволяет использовать набор свойств CSS для одного селектора 
+в другом.
+
+Директора @extend полезна , если у вас есть элементы с почти идентичным стилем ,
+которые отличаются лищь небольшими деталями.
+*/
+.left-btn, .right-btn, .center-btn {
+  background: red;
+  color: white;
+  font-size: 10px;
+  border: 1px solid black;
+}
+
+.center-btn {
+  border: 1px solid white;
+}
+
+.right-btn {
+  border: 1px solid green;
+}
+
+/* При использовании @extend директивы вам не нужно указывать 
+несколько классов для элемента в HTML-коде.
+*//*# sourceMappingURL=extend.css.map */
