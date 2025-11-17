@@ -158,3 +158,24 @@ pre:first-child p {
 q:lang(yes) {
     quotes:"<" ">";
 }
+
+/* nth-child() — это CSS-псевдокласс, который позволяет выбирать элементы 
+по их порядковому номеру внутри родителя. 
+
+nth-child() смотрит на порядок в HTML, а не на классы.
+Если нужно выбирать по типу (только p, только li), то есть другой селектор
+*/
+
+/* значения 'nth-child()' 
+-even - четный порядок 
+-odd - нечетный порядок
+*/
+
+.nth-child__odd:nth-child(odd) {
+    color:red
+}
+
+.nth-child__even:nth-child(even) {
+    display: block;
+    color:green;
+}

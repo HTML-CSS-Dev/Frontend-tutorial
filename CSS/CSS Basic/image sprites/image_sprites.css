@@ -1,0 +1,12 @@
+p {
+    background-image:  url(./assets/svg/instagram.svg);
+    background-repeat: no-repeat;
+    height:
+    50px;
+    width:50px;
+}
+
+p:hover {
+    background-image:  url(./assets/svg/c_instagram.svg);
+    background-repeat: no-repeat;
+}

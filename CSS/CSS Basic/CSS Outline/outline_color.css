@@ -1,0 +1,44 @@
+/* Цвет контура CSS */
+/* 
+Свойство 'outline color' используется для устанвоки цвета контура.
+
+Цвет можно установить с помощью:
+-name - название цвет 'red'
+-HEX - 16 значаный цвет "#ff0000"
+-RGB - red green blue 'rgb(255,0,0)'
+-HSL - hue salvatation lightness hsl(0%,100%,50%)
+-invert - выполняет инверсию цвета (что гарантирует видимость контура независимо 
+от цвета фона ) 
+*/
+
+.name {
+    outline-style:solid;
+    outline-width:medium;
+    outline-color:red;
+}
+
+.hex {
+    outline-style:solid;
+    outline-width:medimu;
+    outline-color:#00ff00;
+}
+
+.rgb {
+    outline-style:solid;
+    outline-width:medium;
+    outline-color:rgb(0,0,255)
+}
+
+.hsl {
+    outline-style:solid;
+    outline-width:medium;
+    outline-color:hsl(240, 100%, 50%)
+}
+
+.invert {
+    outline-style:solid;
+    outline-width: medium;
+    outline-color:invert;
+    background-color:red;
+}
+

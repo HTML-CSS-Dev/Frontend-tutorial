@@ -1,0 +1,70 @@
+/* Отступы в таблицах CSS */
+/* 
+Чтобы добавить немного свобожного пространства между внутренними границами и 
+содержимым таблицы , используйте свойство 'padding' для элементов <td>
+и <th>:
+*/
+
+.table-first {
+    width:80%;
+    height:100px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.table-first  .td , .th {
+    text-align: left;
+    border: 1px solid black;;
+    padding:10px;
+}
+
+
+/* Горизонтальные разделитеди CSS */
+/* 
+Чтобы создать горизонтальные разделители для таблицы , добавтье свойство
+'border-bottom' к элементам <th> и <td>
+*/
+
+
+.table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+}
+.table td , th {
+    border-bottom:1px solid black;
+    padding:10px 0 10px;
+}
+
+
+.table th {
+    text-align:left;
+}
+
+.table tr:hover {
+    background: tomato;
+}
+
+
+/* Таблтца с наведением в CSS */
+/* 
+Используйте селектор CSS :hover для <tr>, чтобы выделить 
+строки при наведении курсора 
+*/
+
+
+/* Цвет таблицы CSS */
+/* Для создания тсблиц с полосками <<зебра>> используйте селектор  
+'nth-child()' и добавьте 'background-color' кл всем четным (или нечетным)
+строкам таблицы:
+*/
+
+
+.zebra {
+    border-collapse: collapse;
+}
+
+.zebra tr:nth-child(even) {
+    background: #f2f2f2;
+}

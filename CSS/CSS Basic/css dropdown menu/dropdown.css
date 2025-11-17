@@ -1,0 +1,33 @@
+/* Выпадающие списки CSS используются для отображения списка опций или контента, когда пользователь нажимает на элемент 
+или наводит на него курсор, например на кнопку или навигационную ссылку. */
+
+.button {
+    background:green;
+    border: none;
+    position: relative;
+    height:20px;
+    width:50px;
+}
+
+.lists {
+    padding:0;
+    position: absolute;
+    margin:0;
+    display: none;
+}
+
+.lists > li {
+    list-style: none;
+}
+
+.lists > li:hover {
+    background: green;
+}
+
+.button:hover .lists {
+    display: block;
+}
+
+.button:hover {
+    background: red;
+}

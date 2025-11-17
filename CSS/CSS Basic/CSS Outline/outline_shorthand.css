@@ -1,0 +1,28 @@
+/* CSS Outline - свойство outline */
+
+/* Свойство 'outline' - это сокращенное свойство для установки следующих 
+отдельных свойств контура:
+
+- outline-width
+- outline-style
+- outline-color
+*/
+
+/* Возможно указать одно , два или три значения из приведенных выше списка.
+Порядок значений не имеет.
+*/
+
+.shorthand {
+    outline:medium solid red;
+}
+
+/* Контур CSS с закругленными углами */
+/* Контруы также могут иметь закругленные углы
+Свойство 'border-radius' используется для добавдения загругленные границ к элементу
+*/
+
+.border-radius {
+    outline:medium dotted blue;
+    border-radius: 20px;
+    border:medium solid red;
+}

@@ -1,0 +1,35 @@
+/* CSS Ширина контура */
+
+/* Свойство 'outline-width' определяет ширину контура и может принимать одно 
+из следующих значений:
+ -thin - (обычно 1px)
+ -medium - (обычно 3px)
+ -thick - (обычно 5px)
+ -конкретный размер
+ */
+
+
+/* thin = 1px */
+.thin {
+    outline-style:solid; 
+    outline-width: thin;
+}
+/* medium */
+.medium {
+    outline-style: solid;
+    outline-width:medium;
+}
+
+/* thick */
+
+.thick {
+    outline-style:solid;
+    outline-width: thick;
+}
+
+/* pixels */
+
+.pixels {
+    outline-style:solid;
+    outline-width:10px;
+}

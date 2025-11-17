@@ -1,0 +1,48 @@
+/* vertical nav bar */
+.nav {
+    background: #f1f1f1;
+    padding:0;
+    margin: 0;
+    width: 100px;
+}
+
+.nav li  {
+    list-style: none;
+    font-size:12px;
+    padding:0 10px;
+}
+
+li:first-child {
+    background: green;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+.same:hover {
+    background:#555555;
+}
+
+
+/* navigation bar full */
+
+.nav-bar {
+    display: flex;
+}
+
+.nav-bar__left , .nav-bar__right {
+    border: 1px solid;
+    height:300px;
+}
+
+.nav-bar__list {
+    width: 200px;
+    height:300px;
+}
+
+.nav-bar__right {
+    width:300px;
+    overflow:scroll;
+    overflow-x:hidden
+}

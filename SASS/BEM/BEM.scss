@@ -1,0 +1,15 @@
+// & - амперсанта
+
+.nav {
+    &__list {
+    color:red
+    }
+
+    &__icon {
+    color:green
+    }
+
+    &__img--diferent-color {
+    color:blue
+    }
+}
