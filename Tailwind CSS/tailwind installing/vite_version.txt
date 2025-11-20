@@ -1,0 +1,23 @@
+Создаем 'vite' проект 
+1. npm create vite@latest 'project name'
+
+Устанавливаем 'tailwindcss' и '@tailwindcss/vite'
+2. npm install tailwindcss @tailwindcss/vite
+
+добавляем @tailwindcss/vite на 'vite' плугины.
+3. vite.config.js:
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+
+импортируем 'tailwindcss' к нашим css файл
+4. @import 'tailwindcss';
+
+
+Она нужна чтобы мы могли запустить наш файл через 'vite'
+5. npm run dev
