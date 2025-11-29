@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    q:lang(no) {
+    quotes:'< ' ' >';
+    }
+</style>
+</head>
+<body>
+<h3>js within html document in the <q lang="no">body</q></h3>
+<p id="color" onclick="functions"></p>
+
+<h3>javascript external file path</h3>
+<p id="external"></p>
+
+<!-- internal file path inserted in body -->
+<script>
+document.getElementById('color').style.color='red';
+document.getElementById('color').innerHTML='this is an html document'
+</script>
+
+<!-- external file path -->
+<script src="path.js"></script>
+</body>
+</html>

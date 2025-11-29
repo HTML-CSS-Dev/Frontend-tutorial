@@ -1,0 +1,7 @@
+file path -> <head>
+output -> document.write
+statements -> function
+
+
+prompt 
+parseInt()

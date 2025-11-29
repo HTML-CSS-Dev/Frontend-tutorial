@@ -1,0 +1,124 @@
+/* CSS counters */
+
+/* 
+C помошью CSS - счетчиков можно создавать динамическую нумерацию элемнетов 
+(например , заголовков , разделов или пунктов списка) без использования javascript.
+
+CSS - счетчик - это переменные подердиваемые CSS , и их значения можно 
+увеличивать (или уменьшать) с помошью  CSS.
+*/
+
+/* Автоматическая нумерация CSS с помощью счетчиков. */
+
+/* Счеткчик CSS похожи на << переменные >>. Значения переменных могут 
+увеличиатся (или уменшатся) с помошью правил CSS.
+
+Для работы со счетчиком CSS мы будем использовать следующие сврйства:
+
+ - counter-reset - создает или сбрасывает счеткчик
+ 
+ - counter-increment - уеличивает или уменшает счетчик.
+ 
+ - content - вставляет сгенерированный контент (испольщуется внутри ::before 
+ и ::after , для вставки сгенерированного контента.
+ )
+
+ - counter() и counters() _ добавляет значение счетчику к элементу. 
+*/
+
+/* Чтобы использовать счетчик CSS его сначала нужно создать с помошью 
+свойства 'counter-reset'. 
+*/
+
+
+/* increment */
+    .increments {
+    counter-reset:increments;
+    }
+
+    .items::before {
+    counter-increment:increments;
+    content:counter(increments) '.';
+    }
+
+
+
+/* Увеличение и уменьшение счетчика в CSS */
+
+/* Свойство 'counter-increment' имеет второй параметр. По умолчанию он равен 
+1 (что увеличивает счетчик на единицу). Чтобы уменьшить значение счетчика ,
+можно установить его равным -1.
+*/
+
+ /* increment - */
+    .decrement {
+    counter-reset:decrement
+    }
+
+    .decrement-items::before {
+    counter-increment:decrement -1;
+    content:counter(decrement);
+    }
+
+
+    .even {
+    counter-reset: event;
+    }
+
+    .even-numbers::before {
+    counter-increment:event 2;
+    content:counter(event) '. ';
+    }
+
+
+    /* Использование двух чсетчиков */
+
+    .two-counter {
+    display: flex;
+    align-items: center;
+    counter-reset: two-counter;
+    }
+
+    .numbers::before {
+    counter-increment: two-counter;
+    content:counter(two-counter) '.';
+    }
+
+    .numbers2::before {
+    counter-increment: two-counter 0;
+    content:counter(two-counter) '. ';
+        
+    }
+
+/* CSS counters() */
+/* 
+Функция 'counters()' возвращает значения именнованных и вложенных 
+счетчиков в виде строки.
+*/
+
+.counter {
+    counter-reset:counter;
+}
+
+.counter-items {
+    counter-reset:counters;
+}
+
+.differ {
+    counter-reset: differ;
+}
+
+.counter-items::before {
+    counter-increment: counter;
+    content:counter(counter) '. ';
+}
+
+.counter-item::before {
+    counter-increment: counters;
+    content:counters(counter, '. ' ) '.' counter(counters) '.';
+}
+
+.counter-itm::before {
+    counter-increment:differ;
+    content: counters(counter, '.') '.' counter(differ) '.' ;
+}
