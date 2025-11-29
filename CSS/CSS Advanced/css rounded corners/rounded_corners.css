@@ -1,0 +1,115 @@
+/* CSS  Зкругленные углы */
+/* 
+Свойство  "border-radius" определяет радиус скругления 
+углов элемента.
+
+Это свойство можно применять ко всем элемиентм с background-color ,
+а 'border', или 'background-image'.
+*/
+
+.radius {
+    border-radius:50px;
+    height:150px;
+    width:150px;
+    background: red;    
+}
+
+/* Совет: Свойство 'border-radius' н самом деле является сокрашенным
+обознчением свойств 'border-top-left-radius' , border-top-right-radius,
+'border-bottom-right-radius' и 'border-bottom-left-radius'.
+*/
+
+.different {
+    height:150px;
+    width:150px;
+    background: red;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:40px;
+    border-bottom-right-radius:10px;
+    border-top-right-radius: 70px;
+}
+
+
+
+/* shorthand для border-radius */
+/* 
+Свойство 'border-radius' может иметь от одного до читерых 
+значений.
+
+border-radius:20px 40px 50px 10px
+*/
+
+/* Четыре знчения - border-radius:15px 50px 30px 5px;
+(первое знчение применяется к верхнему левому углу , 
+второе - к верхнему првому , третье - к нижнему правому , а четвертое 
+- к нижнему левому);
+*/
+
+.rounded-shorthand {
+    height:100px;
+    width:100px;
+    background: green;
+    border-radius:15px 50px 30px 5px;
+}
+
+
+/* Три значения - border-radius: 15px 50px 30px  
+(первое значение прменяется к верхнему левому углу , 
+второе - к верхнему првому и нижнему левомуц углам,
+а третье - к нижнему првому углу;)
+*/
+
+.three {
+    height:100px;
+    width:100px;
+    background: red;
+    border-radius: 15px 50px 30px;
+}
+
+/* Два знчения - border-radius:15px 50px (первое значение 
+применяется левому и нижнему првому углм, а второе -
+к верхнему првмоу и нижнему левому углам): 
+*/
+
+.two {
+    height:100px;
+    width:100px;
+    background: red;
+    border-radius: 15px 50px;
+}
+
+/* Элиптическике и круглые формы в CSS */
+/* 
+Чтобы создать Элиптические углы нужно указать два значения для 
+каждого радиуса, рзделенные косой чертой / . Первое знчение 
+определяет горизонтльный радиус , а второй вертикльный. 
+
+Чтобы создать овальную форму (для прямоугольного элемента)
+или круглую форму (для квадратного элемента) , устновите 
+'border-radius' на 50%. 
+*/
+
+
+/* ovall */
+.ovall {
+    height:100px;
+    width:200px;
+    background: red; 
+    border-radius:50%;
+}
+
+/* ellip[se */
+.ellipse {
+    height:100px;
+    width:100px;
+    background: red; 
+    border-radius:50px/100px;
+}
+
+/* rounded */
+.circle {
+    height:100px;
+    width:100px;
+    background: red; 
+    border-radius:50%;
+}
