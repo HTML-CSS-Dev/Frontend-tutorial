@@ -1,0 +1,89 @@
+<!-- 
+Плагины - это компьютерные программы , которые расширяют стандартные 
+функции браузера.
+-->
+
+<!-- Плагины -->
+<!-- 
+Плагины предназначены для решения множества различных задач:
+
+Для запуска Java-апплетов
+
+Для запуска жлементов управления Microsoft ActiveX
+
+Для отображения карт
+
+Для проверки на наличие вирусов
+
+Для проверки банковского идентификатора.
+
+-->
+
+<!-- 
+Предупреждение !
+
+- Большинство браузеров больше не подержитвают Java-аплеты и плагины.
+
+- Элементы управления ActiveX больше не подерживаются ни в одном браузере.
+
+- Подержка Shockwave Flash также отключена в современных браузерах.
+
+-->
+
+
+<!-- Элемент <object> -->
+<!-- 
+Элемент <object> поддерживпет всет браузерами.
+    
+Элемент <object> определяет встроенный обьект в HTML-документе.
+
+Он был разработан встраивания плагинов (таких как Java-аплеты, 
+программы для чтения PDF-файлов и Flash-плееры) в веб-страницы , но его также 
+можно испольщоваь для включения HTML в HTML.
+-->
+
+<h3>Тег <q>object</q> </h3>
+<object height="300px" width="300px" data="./assets/PDF/docks.pdf" ></object>
+
+<!-- Или Изображение -->
+
+<h3> <q>object</q> с изображением </h3>
+<object height="300" width="300" data="./assets/img/img.jpg">
+</object>
+
+<!-- object с html файлами -->
+<h3> <q>object</q>  </h3>
+<object border="1" height="300" width="300" data="./index.html"></object>
+
+<!-- object with audio files -->
+<h3><q>object</q> with audiofiles</h3>
+<object data="./assets/audio/audio.m4a"></object>
+
+<!-- object width videofiles -->
+<h3><q>object</q> with videofiles</h3>
+<object data="./assets/video/mp4.mp4"></object>
+
+<!-- Элемент <embed> -->
+<!-- 
+Элемент <embed> поддердивается всеми основными браузерами.
+    
+Элемент <embed> также определяет встроенный обьект в HTML-документе.
+
+Веб-бразуеры уже давно поддерживает элемент <embed>. Однако до
+HTML5 он не входил в спецификацию HTML. 
+-->
+
+<h3><q>embed</q> width pdf</h3>
+<embed src="./assets/PDF/docks.pdf" height="300" width="300">
+
+<h3><q>embed</q> width image files</h3>
+<embed src="./assets/img/img.jpg">
+
+<h3><q>embed</q> width html files</h3>
+<embed style="border:1px solid black" height="300" width="300" src="index.html">
+
+<h3><q>embed</q> video files</h3>
+<embed src="./assets/video/mp4.mp4">
+
+<h3><q>embed</q> audio files</h3>
+<embed src="./assets/audio/audio.m4a">

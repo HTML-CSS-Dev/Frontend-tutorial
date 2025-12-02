@@ -1,0 +1,90 @@
+<!-- HTML Видео -->
+<!--
+Элемент HTML <video> используется для отображения видео 
+на веб-странице
+-->
+
+<!-- Элемент HTML <video> -->
+<!-- 
+Чтобы отобразить видео в HTML используйте элемент <video>    
+-->
+
+<h3>тег<q>video</q> </h3>
+<video src="./src/video/mp4.mp4" height="200" width="300" controls></video>
+
+<!-- Как это работает -->
+<!--  
+Атрибут 'controls' добавляет элементы управления видео, такие как 
+воспроизведение , пауза и регулировка громкости.
+
+Рекомендуется всегда указать 'width' и 'height' атрибуты. Если высота и
+ширина не заданы страница может мерцать во время загрузки видео.
+
+Элемент <source> позволяет указать альтернативные видеофайлы , из которых 
+браузер может выбрать один. Браузер будет использовать распознанный формат.
+
+Текст между тегами <video> и </video> будет отображаться только в
+браузерах, которые не подерживают элемент <video>.
+-->
+
+<h3>тег <q>source</q></h3>
+<video height="200" width="300" controls >
+    <source src="./src/video/video.MP4" type="video/mp4">
+    <source src="./src/video/mp4.mp4" type="video/mp4">
+</video>
+
+<!-- HTML <video> автозаполнение -->
+<!-- 
+Чтобы автоматически запустить видео , испольщуйте 'autoplay' атрибут.    
+-->
+
+<h3>атрибут <abbr title="hello">autoplay</abbr></h3>
+<video height="200" width="300" autoplay muted>
+    <source src="./src/video/image.mp4" type="video/mp4">
+</video>
+
+
+<!-- Примечание: в большинстве случаев браузеры на базе chromium не разрешают 
+автозпроизводение. Однако автопроищведение с отключенным звуком разрешено
+всегда.
+-->
+
+<!--
+Добавьте 'muted' после 'autoplay', чтобы видео начало воспроищволится 
+автоматически (но без звука): 
+-->
+
+
+<!-- Подерджка браузерами 
+chrome 
+edge
+firefox /Mozila
+Safari 
+Opera
+-->
+
+
+<!-- Форматы HTML  - видео -->
+
+<!-- ПОдердиваются три формата видео MP4 ,  Ogg ,  WebM -->
+
+<!-- 
+браузеры:       MP4       WebM     Ogg
+
+Edge            yes       yes      yes
+
+Opera           yes       yes      yes
+
+Yandex          yes       yes      yes
+
+Safari          yes       yes      no
+
+Firefox         yes       yes     yes
+-->
+
+<h3>all formats</h3>
+<video height="100" width="300" controls >
+    <source src="./src/video/mp4.webm" type="video/webm">
+    <source src="./src/video/mp4.ogg" type="video/ogg">
+    <source src="./src/video/mp4.mp4" type="video/mp4">
+</video>
